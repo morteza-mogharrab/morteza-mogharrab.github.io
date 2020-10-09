@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'BTraffic';
+	src: url('BTraffic.eot');
+	src: url('BTraffic.eot?#iefix') format('embedded-opentype'),
+		url('BTraffic.woff') format('woff'),
+		url('BTraffic.ttf') format('truetype');
+}
