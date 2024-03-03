@@ -4,16 +4,16 @@
 :root {
   --header-height: 3rem;
   /*========== Colors ==========*/
---first-color: rgb(128, 0, 128); 
---icon-color: rgb(40, 40, 40); /* Purple color for icons */
+--first-color: rgb(0, 128, 128); 
+--icon-color: rgb(0, 128, 128); 
 --first-color-profile: rgb(208,200,197);
 
 --first-color-second: rgb(77, 77, 77); /* Adjusted color related to first color */
 --first-color-alt: rgb(110, 110, 110); /* Adjusted color related to first color */
 --first-color-lighter: rgb(188, 188, 188); /* Adjusted color related to first color */
---title-color: var(--icon-color); /* Icon color set to purple */
+--title-color: var(--icon-color); 
 --text-color: rgb(51, 51, 51); /* Adjusted color related to both background and first color */
---text-color-light: rgb(40, 40, 40); /* Adjusted color related to both background and first color */
+--text-color-light: rgb(0, 128, 128); /* Adjusted color related to both background and first color */
 --input-color: rgb(77, 77, 77); /* Adjusted color related to first color */
 --body-color: rgb(255, 255, 255); /* Adjusted background color */
 --container-color: #FFF; /* Keep container color white */
@@ -39,7 +39,7 @@
   --mb-1: 1rem;
   --mb-1-5: 1.5rem;
   --mb-2: 2rem;
-  --mb-2-5: 2.5rem;
+  --mb-2-5: 4.5rem;
   --mb-3: 3rem;
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -61,7 +61,7 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
---first-color: rgb(128, 0, 128); 
+--first-color: rgb(0, 128, 128); 
 --first-color-second: rgb(180, 180, 180); /* Adjusted color related to first color */
 --title-color: rgb(242, 242, 242); /* Adjusted color related to both background and first color */
 --text-color: rgb(191, 191, 191); /* Adjusted color related to both background and first color */
@@ -184,7 +184,7 @@ img {
 }
 
 .nav__logo:hover {
-  color: var(--first-color);
+  color: var(--first-color-alt);
 }
 
 .nav__toggle {
@@ -193,7 +193,7 @@ img {
 }
 
 .nav__toggle:hover {
-  color: var(--first-color);
+  color: var(--first-color-alt);
 }
 
 @media screen and (max-width: 767px) {
@@ -225,7 +225,7 @@ img {
 }
 
 .nav__link:hover {
-  color: var(--first-color);
+  color: var(--first-color-alt);
 }
 
 .nav__icon {
@@ -278,7 +278,7 @@ img {
 }
 
 .home__social-icon {
-  font-size: 1.25rem;
+  font-size: 1.65rem;
   color: var(--first-color);
 }
 
@@ -393,15 +393,15 @@ img {
 
 /*==================== ABOUT ====================*/
 .about__img {
-  width: 200px;
-  border-radius: .5rem;
+  width: 300px;
+  border-radius: .9rem;
   justify-self: center;
   align-self: center;
 }
 
 .about__description {
-  text-align: center;
-  margin-bottom: var(--mb-2-5);
+  text-align: left;
+/*margin-bottom: var(--mb-2-5); */
 }
 
 .about__info {
