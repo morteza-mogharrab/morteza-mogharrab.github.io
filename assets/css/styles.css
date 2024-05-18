@@ -74,6 +74,14 @@ body.dark-theme {
 
 }
 
+
+
+
+
+
+
+
+
 /*========== Button Dark/Light ==========*/
 .nav__btns {
   display: flex;
@@ -147,6 +155,8 @@ img {
 .section__title, .section__subtitle {
   text-align: center;
 }
+
+
 
 /*==================== LAYOUT ====================*/
 .container {
@@ -994,6 +1004,34 @@ img {
   background-color: var(--text-color-light);
 }
 
+.portfolio__data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap between buttons */
+}
+
+.custom-button {
+    border: 1px solid #008080;
+    background-color: transparent;
+    color: #333;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px; /* Adjust the padding as needed */
+    flex: 1 1 calc(50% - 10px); /* Flex-grow, flex-shrink, and flex-basis properties */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.custom-button:hover {
+    background-color: #d3d3d3; /* Light gray color on hover */
+}
+
+.custom-icon {
+    margin-left: 8px;
+}
+
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 @media screen and (max-width: 350px) {
@@ -1065,6 +1103,15 @@ img {
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+
+
+  .project__container1,
+ {
+    grid-template-columns: repeat(3, 2fr);
+  }
+
+
   .qualification__sections {
     display: grid;
     grid-template-columns: .6fr;
@@ -1077,6 +1124,8 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
+
+
   body {
     margin: 0;
   }
@@ -1203,7 +1252,13 @@ img {
   .footer__copy {
     margin-top: 4.5rem;
   }
+    .services__container1 {
+    grid-template-columns: repeat(2, 49%);
+    justify-content: center;
+
 }
+
+
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
@@ -1250,21 +1305,6 @@ img {
   }
 }
 
-  style>
-    .portfolio__container {
-        margin-left: 50px;
-        margin-right: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    @media (min-width: 992px) {
-        .portfolio__container {
-            margin-left: 150px;
-            margin-right: 150px;
-        }
-    }
 
     .portfolio__row {
         display: flex;
@@ -1297,3 +1337,11 @@ img {
      .portfolio__button {
         margin-bottom: 10px; /* Add margin to create space between buttons */
     }
+
+  .services__container1 {
+    grid-template-columns: repeat(3, 33%);
+    justify-content: center;
+
+
+
+
