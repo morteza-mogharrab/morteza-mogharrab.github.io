@@ -1249,3 +1249,51 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+  style>
+    .portfolio__container {
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 992px) {
+        .portfolio__container {
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+    }
+
+    .portfolio__row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .portfolio__content {
+        flex: 1 1 32%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .portfolio__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .portfolio__data {
+        padding: 10px;
+    }
+
+    .button--flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+     .portfolio__button {
+        margin-bottom: 10px; /* Add margin to create space between buttons */
+    }
