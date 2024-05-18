@@ -19,6 +19,9 @@
 --container-color: #FFF; /* Keep container color white */
 --scroll-bar-color: rgb(240, 240, 240); /* Adjusted color related to background color */
 --scroll-thumb-color: rgb(220, 220, 220); /* Adjusted color related to background color */
+--text-color3: rgb(77, 77, 77); /* Adjusted color related to both background and first color */
+--text-color4: rgb(220, 220, 220); /* Adjusted color related to both background and first color */
+
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
@@ -70,7 +73,9 @@ body.dark-theme {
 --container-color: rgb(83, 83, 83); /* Adjusted color related to first color */
 --scroll-bar-color: rgb(124, 124, 124); /* Adjusted color related to background color */
 --scroll-thumb-color: rgb(91, 91, 91); /* Adjusted color related to background color */
---text-color-light: rgb(250, 250, 250); /* Adjusted color related to both background and first color */
+--text-color3: rgb(191, 191, 191); /* Adjusted color related to both background and first color */
+--text-color4: rgb(51, 51, 51); /* Adjusted color related to both background and first color */
+
 
 }
 
@@ -356,7 +361,7 @@ img {
 .button {
   display: inline-block;
   background-color: var(--first-color);
-  color: #FFF;
+  color: var(--text-color3);
   padding: 1rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
@@ -1010,10 +1015,21 @@ img {
     gap: 10px; /* Adjust the gap between buttons */
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .custom-button {
     border: 1px solid #008080;
     background-color: transparent;
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -1025,7 +1041,10 @@ img {
 }
 
 .custom-button:hover {
-    background-color: #d3d3d3; /* Light gray color on hover */
+    background-color: var(--first-color-second); /* Light gray color on hover */
+    color: var(--text-color4);
+
+
 }
 
 .custom-icon {
