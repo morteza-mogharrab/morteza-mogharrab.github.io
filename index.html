@@ -1,749 +1,124 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="assets/img/favicon.png" sizes="32x32">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morteza Mogharrab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-        
-        <!--==================== SWIPER CSS====================-->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-        <!--==================== CSS ==========-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+        .container {
+            max-width: 800px;
+        }
 
-        <title>Morteza M.</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">Morteza Mogharrab</a>
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i> Home
-                            </a>
-                        </li>
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: #a8a8a8;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
 
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i> About
-                            </a>
-                        </li>
+        .loader {
+            width: 150px;
+            height: 3px;
+            background: #2c3e50;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 3px;
+        }
 
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i> Skills
-                            </a>
-                        </li>
+        .loader::after {
+            content: '';
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            background: #3498db;
+            animation: loading 1.5s infinite ease-in-out;
+        }
 
-                        <li class="nav__item">
-                            <a href="#services" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i> Interests
-                            </a>
-                        </li>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i> Portfolio
-                            </a>
-                        </li>
+        @keyframes loading {
+            0% {
+                left: -40%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
 
-                        <!-- <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i> Contactme
-                            </a>
-                        </li> -->
+        .social-links {
+            margin-top: 2rem;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
 
-                    </ul>
-                    
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
-                </div>
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
 
-                <div class="nav__btns">
-                    <!-- Theme change button -->
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+        .social-links a:hover {
+            color: #3498db;
+        }
 
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://www.linkedin.com/in/morteza-mogharrab/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-    
-                            <a href="https://github.com/morteza-mogharrab" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>                            
-                            </a>
-                            <a href="https://www.behance.net/morteza-mogharrab" target="_blank" class="home__social-icon">
-                            <i class="uil uil-behance-alt"></i>
-                        </a>
-                        <a href="mailto:moghaarra@ualberta.ca" target="_blank" class="home__social-icon">
-                            <i class="uil uil-message"></i>
-                        </a>
-                        <!--    <a href="https://www.instagram.com/morteza_mogharrab/" target="_blank" class="home__social-icon">
-                            <i class="uil uil-instagram"></i> 
-                         </a>
-                        <a href="https://twitter.com/M_M_Morteza_M_M" target="_blank" class="home__social-icon">
-                            <i class="uil uil-twitter-alt"></i>
-                        </a>-->
-
-
-                        </div>
-    
-                        <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-
-                                    <!--==================== 
-                                        Insert your image in the Img folder and Change your image |
-                                        Center your image with X: horizontal, Y: vertical 
-                                    ====================-->
-                                    <image class="home__blob-img" x="12" y="18"  href="assets/img/profile.png"/>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="home__data">
-                            <h1 class="home__title">Hi! I'm Morteza,</h1>
-                            <p><b>A versatile Multimedia Developer and Analyst with a passion for innovation and problem-solving.</b></p><br>
-                            <p class="home__description">I've cultivated a continuous-learning mindset in my journey, constantly adapting to the ever-evolving digital landscape.<br><br>I'm looking for internship opportunities to apply my diverse skill set and contribute to meaningful projects.
-                               <!--
-                            <a href="mailto:moghaarra@ualberta.ca" class="button button--flex" target="_blank">
-                                Contact Me <i class="uil uil-message button__icon"></i>
-                            </a>
-                        -->
-                        </div>
-                    </div>
-
-                   <!-- 
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Scroll down</span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                        </a>
-                    </div>
-                -->
-                </div>
-            </section>
-
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                <h2 class="section__title" style="margin-bottom: 40px;">My Story</h2>
-                <!--<span class="section__subtitle">My introduction</span>-->
-
-                <div class="about__container container grid">
-                   <!-- <img src="assets/img/Multimedia.png" alt="" class="about__img" style="max-width: 100%; height: auto; float: right;">-->
-                    <div class="about__data">
-                            <p class="about__description">
-                            1 - I was driven by an insatiable thirst for knowledge and self-improvement from my earliest years in Tehran. Little did I know then that this innate curiosity would become the driving force behind a lifelong journey filled with challenges, achievements, and constant growth. <br><br>
-                            2 - My path was paved with a diverse array of experiences that honed my ability to tackle complex tasks head-on. Whether it was mastering English through determined self-study, acquiring discipline and resilience during my mandatory military service, or navigating the multifaceted roles of a freelancer, each endeavor pushed me to expand my horizons and develop a versatile skill set. <br><br>
-                            3 - Academic pursuits were never just about degrees; they were opportunities to explore, create, and innovate. My Master's in Multimedia opened doors to cutting-edge fields like AI, virtual reality, and data visualization, while my Computer Engineering background provided a solid technical foundation. Every project, from developing VR training applications to exploring AI's creative potential, challenged me to think critically, solve problems, and contribute meaningfully.<br><br>
-                            4 - Amidst this relentless pursuit of knowledge and growth, I found solace and inspiration in the arts. Painting, drawing, and sketching were not just hobbies but channels for expressing my creativity and visualizing complex ideas. These artistic outlets seamlessly integrated with my passion for data analysis, design, and development, allowing me to communicate insights through visually stunning and compelling data art.
-                            </p>
-                    </div>
-                    <div class="about__data">
-                            <p class="about__description">
-                            5 - My journey has been defined by a willingness to embrace new challenges and a desire to create positive change. Whether volunteering with local charities, bringing joy through music, or contributing to global initiatives like Google Maps, I have consistently sought opportunities to make a meaningful impact on the world around me.<br><br>
-                            6 - As we stand on the precipice of an AI revolution, I find myself uniquely equipped to navigate this unpredictable phase. My ability to break down tasks, learn continuously, and approach problems from multiple angles has been honed through a lifetime of diverse experiences. With a versatile skillset spanning data analysis, visualization, design, and development, I am ready to take on new challenges, solve complex problems, and contribute to the evolving technological landscape.<br><br>
-                            7 - Ultimately, my life's story is one of perseverance, adaptability, and an unwavering commitment to growth. It is a testament to the power of curiosity, creativity, and a relentless drive to learn, create, and positively impact the world.  </p> 
-
-                        <div class="about__buttons" style="margin-top: 40px;">
-                            <!--==================== Change your CV ====================-->
-                            <a download="" href="assets/pdf/ResumeMortezaMogharrab.pdf" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-                                Download Resume <i class="uil uil-download-alt button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </section>
-<!--==================== PORTFOLIO ====================-->
-
-
-
-
-<section class="services section" id="portfolio">
-    <h2 class="section__title">Portfolio</h2>
-    <span class="section__subtitle">Some of my recent Academic Projects</span>
-
-    <div class="services__container1 container grid">
-
-
-
-
-            <!--=============== PORTFOLIO 1 ===============-->
-<div class="portfolio__content">
-    <img src="assets/img/StryleTransfer.jpg" alt="" class="portfolio__img">
-    <div class="portfolio__data">
-        <h3 class="portfolio__title">Arbitrary Style Transfer</h3>
-        <p class="portfolio__description">A comprehensive exploration of widely-known CNN-based Arbitrary Style
-        Transfer models (VGG19 and ResNet34), trained on the ImageNet dataset.</p>
-        <a download="" href="assets/pdf/ArbitraryStyleTransfer-MortezaMogharrab.pdf" 
-           class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Report
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-        <a download="" href="https://github.com/morteza-mogharrab/Style-Transfer-using-VGG19-and-ResNet34" 
-           class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Code
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coming Soon</h1>
+        <p>My portfolio is currently undergoing a major upgrade to showcase my latest projects and skills. Please check back soon for an enhanced experience!</p>
+        <div class="loader"></div>
+        <p>Meanwhile, you can connect with me on:</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/morteza-mogharrab/" target="_blank">LinkedIn</a>
+            <a href="mailto:mogharra@ualberta.ca">Email</a>
+        </div>
     </div>
-</div>
-
-            <!--=============== PORTFOLIO 1 ===============-->
-     <div class="portfolio__content">
-    <img src="assets/img/Human-Fall-Detection-Multimodality-Approach.jpg" alt="" class="portfolio__img">
-    <div class="portfolio__data">
-        <h3 class="portfolio__title">Human Fall Detection (Multimodality Approach)</h3>
-        <p class="portfolio__description">Conducted a comprehensive review and synthesis of multimodal human fall
-            detection systems, reimplementing and analyzing various approaches using
-            CNN, LSTM, Vision Transformers, and Claude AI APIs across multiple datasets.</p>
-        <a download="" href="assets/pdf/Human-Fall-Detection-Technical-Report.pdf" 
-           class="button button--flex button--small portfolio__button custom-button" target="_blank"
-           >
-            Report
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-        <a download="" href="https://github.com/morteza-mogharrab/Human-Fall-Detection-Multimodality-Approach/tree/main" 
-           class="button button--flex button--small portfolio__button custom-button" target="_blank"
-           >
-            Code
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-    </div>
-</div>
-<!--=============== PORTFOLIO 1 ===============-->
-<div class="portfolio__content">
-    <img src="assets/img/Stock-Market-Visualization-Dashboard.jpg" alt="" class="portfolio__img">
-    <div class="portfolio__data">
-        <h3 class="portfolio__title">Stock Market Visualization Dashboard</h3>
-        <p class="portfolio__description">Developed a real-time data visualization application using React.js, Plotly.js,
-        and RESTful API, providing detailed information on top tech stocks through
-        various chart types.</p>
-        <a download="" href="assets/pdf/Stock-Market-Technical-Report.pdf" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Report
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-        <a download="" href="https://github.com/morteza-mogharrab/Stock-Market-Visualization-Dashboard/tree/main" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Code
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-    </div>
-</div>
-
-<!--=============== PORTFOLIO 2 ===============-->
-<div class=" portfolio__content">
-    <img src="assets/img/recommender.jpg" alt="" class="portfolio__img">
-    <div class="portfolio__data">
-        <h3 class="portfolio__title">Movie Recommender System</h3>
-        <p class="portfolio__description">Explored collaborative filtering, SVD, and K-NN algorithms, together with
-        RMSE, ARHR, etc. evaluation metrics using Movie-Lens datasets, Scikit-learn,
-        and Surprise libraries. Searched on Apache Spark, Hadoop, Multi-Modal Dual
-        GNN, and Cloud services in large-scale systems like TikTok.</p>
-        <a href="https://github.com/morteza-mogharrab/Recommender-System" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Code
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-    </div>
-</div>
-
-<!--=============== PORTFOLIO 5 ===============-->
-<div class="portfolio__content">
-    <img src="assets/img/Robot.jpg" alt="" class="portfolio__img">
-    <div class="portfolio__data">
-        <h3 class="portfolio__title">VR Training for Factory Robot Repair</h3>
-        <p class="portfolio__description">Developed a Meta-Quest-3 app in Unity 3D, including haptic feedback, clear
-        text instructions, 3D spatial audio, and high-quality assets, as well as
-        conducting usability tests for better UX.</p>
-        <a download="" href="assets/pdf/VR-Report-Morteza-Mogharrab.pdf" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Report
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-    </div>
-</div>
-
-<!--=============== PORTFOLIO 4 ===============-->
-<div class="portfolio__content">
-    <img src="assets/img/Sentiment-Analysis-scaled.jpg" alt="" class="portfolio__img">
-    <div class="portfolio__data">
-        <h3 class="portfolio__title">Sentiment Analysis of Amazon Food Comments</h3>
-        <p class="portfolio__description">Utilized TextBlob, BERT, and VADER to extract polarity and subjectivity of 500
-        thousand published reviews, along with testing Aylien, MonkeyLearn APIs, and
-        AWS Comprehend free tier.</p>
-        <a href="https://github.com/morteza-mogharrab/Sentiment-Analysis" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Code
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--=============== PORTFOLIO 3 ===============-->
-<div class="portfolio__content">
-    <img src="assets/img/Offline-Chatbot.jpg" alt="" class="portfolio__img">
-    <div class="portfolio__data">
-        <h3 class="portfolio__title">NLP Apps: Translation, Chatbots, Q&A, Summarization</h3>
-        <p class="portfolio__description">Developed GUI applications utilizing Hugging Face’s pre-trained models such
-        as BERT, BART, GPT-2 along with PyQt5 and Transformers, Sacremoses Python
-        libraries.</p>
-        <a href="https://github.com/morteza-mogharrab/NLP-Applications/tree/main" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Code
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-    </div>
-</div>
-
-<!--=============== PORTFOLIO 3 ===============-->
-<div class="portfolio__content">
-    <img src="assets/img/BrainWave-Flashcards.jpg" alt="" class="portfolio__img">
-    <div class="portfolio__data">
-        <h3 class="portfolio__title">BrainWave Flashcards</h3>
-        <p class="portfolio__description">Developed a flashcard learning platform with Python, Flask, SQLite3, and web technologies. It supports various content types like text, tables, images, videos, and has three decks for General, Academic, and Personal domains. Discussed a potential intelligent learning method using an automated flashcard maker with large language models, DualGNN recommender systems, etc.</p>
-        <a download="" href="assets/pdf/BrainWave-Flashcards-Technical-Report.pdf" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Report
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-        <a download="" href="https://github.com/morteza-mogharrab/BrainWave-Flashcards/tree/main" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Code
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-    </div>
-</div>
-
-<!--=============== PORTFOLIO 6 ===============-->
-<div class="portfolio__content">
-    <img src="assets/img/playland.jpg" alt="" class="portfolio__img">
-    <div class="portfolio__data">
-        <h3 class="portfolio__title">Playland Ticketing System</h3>
-        <p class="portfolio__description">Developed an OOP program with Python in which users can choose from 16 different Tickets through a GUI consisting of images, prices, a calculator, and several buttons such as printing the receipt.</p>
-        <a href="https://github.com/morteza-mogharrab/Playland-Ticketing-System" class="button button--flex button--small portfolio__button custom-button" target="_blank">
-            Code
-            <i class="uil uil-arrow-right button__icon custom-icon"></i>
-        </a>
-    </div>
-</div>
-
-</section>
-
-
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-                <h2 class="section__title">Skills</h2>
-            <!--    <span class="section__subtitle">My technical level</span>-->
-
-                <div class="skills__container container grid">
-                    <div>
-                        <!--=============== SKILLS 1 ===============-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header"  >
-                                <i class="uil uil-brackets-curly skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">Toolkits</h1>
-                                <!--    <span class="skills__subtitle">More than 4 years</span>-->
-                                </div>
-    
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-    
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Python, (Pandas, NumPy, Scikit-Learn, PyTorch, NLTK, Matplotlib, Seaborn, Scikit-image, OpenCV)<br><br>
-                                        HTML5 (Living Standard), CSS3 (SASS), Bootstrap5, JavaScript (D3.js – React.js)<br><br>
-                                        Jupyter Notebook, VS Code, Sublime Text3<br><br>
-
-                                        Adobe (FireFly, Photoshop, Illustrator, InDesign, Premiere Pro, Adobe XD, Lightroom, Dreamweaver), Unity<br><br>
-                                        Git/GitHub, AWS, Cybera Cloud, Prompt Engineering<br><br>
-                                        Windows, Mac, Linux
-                                        </h3>
-                                    </div>
-                                </div>
-    
-                            </div>
-                        </div>
-    
-                        <!--=============== SKILLS 2 ===============-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-server-network skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">Competencies</h1>
-                              <!--      <span class="skills__subtitle">More than 5 years</span>-->
-                                </div>
-        
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Problem Solving<br>
-                                            Critical/Creative Thinking<br> 
-                                            Teamwork<br>
-                                            Time Management<br>
-                                            Adaptability to New Challenges<br>
-                                            Social Intelligence
-
-                                        </h3>
-
-
-                                    </div>
-                                
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <!--=============== SKILLS 3 ===============-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-swatchbook skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">Technical Skills</h1>
-                                 <!--   <span class="skills__subtitle">More than 3 years</span>-->
-                                </div>
-    
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-    
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">User Research<br>Inclusive Design<br>Visual
-                                                            Design<br>Data Collection<br>Data Cleaning<br>
-                                                            Data Manipulation<br>Exploratory Data
-                                                            Analysis (EDA)<br>Model Building<br>Model
-                                                            Evaluation<br>Data Visualization<br>Data
-                                                            Storytelling<br>Requirements Analysis<br>
-                                                            Testing<br>Debugging<br>Agile-Scrum
-
-                            </div>
-                        </div> 
-
-                        </div>
-                        <!--=============== SKILLS 4 ===============-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-swatchbook skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">Multidisciplinary Skills</h1>
-                                  <!--  <span class="skills__subtitle">More than 1 years</span>-->
-                                </div>
-    
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-    
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Interdisciplinary Collaboration<br>
-                                            Critical Thinking<br>
-                                            Communication Skills<br>
-                                            Regulatory Compliance<br>
-                                            Privacy Protection<br>
-                                            Transparency and Accountability<br>
-                                            Ethical Decision-Making<br>
-                                            Data Quality Management<br>
-                                            Change Management<br>
-                                            Cybersecurity Awareness
-
-
-                                        </h3>
-                                       <!-- <span class="skills__number">90%</span>-->
-                                    </div>
-                                   
-                                </div>
-
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </section>
-
- 
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                <h2 class="section__title">Areas of Interest</h2>
-                <span class="section__subtitle">Take a look at some of the things I love working on.</span>
-
-                <div class="services__container container grid" style="margin-bottom: 10px;"  >
-                    <!--=============== SERVICES 1 ===============-->
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-graduation-cap services__icon"></i>
-                            <h3 class="services__title">Machine <br> Learning</h3>
-                        </div>
-                        <span class="button button--flex button--small button--link services__button">
-                            View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal" >
-                            <div class="services__modal-content" style="width: 800px;">
-                                <h4 class="services__modal-title">Machine Learning</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify"> My passion for machine learning originates from its remarkable ability to uncover insights and foster innovation across diverse fields. Through both academic and practical experiences, I've witnessed the power of machine learning algorithms in deciphering patterns within extensive datasets, facilitating predictive analysis and informed decision-making. Whether developing complex recommender systems or employing convolutional neural networks for image processing, I find inspiration in the transformative potential of machine learning. 
-                                               </p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify"> Furthermore, its dynamic nature resonates with my inclination towards problem-solving and adaptability, driving me to continuously explore the latest techniques and methodologies. This perpetual evolution fuels my enthusiasm for delving into novel architectures and innovative applications, reinforcing my belief in machine learning's capacity to revolutionize industries and spur positive change.
-                                       </p>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--=============== SERVICES 2 ===============-->
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-analytics services__icon"></i>
-                            <h3 class="services__title">Data <br> Analytics</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">
-                            View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content" style="width: 800px;">
-                                <h4 class="services__modal-title">Data Analytics</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify">My passion for data analytics stems from its capacity to extract actionable insights from complex datasets, facilitating informed decision-making and organizational success. Through academic and practical experiences, I've gained a deep appreciation for its role in revealing hidden trends, patterns, and correlations. Whether conducting exploratory analysis, building predictive models, or visualizing data narratives, I am fascinated by the process of converting raw data into valuable insights driving strategic initiatives. 
-                                            .</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p  align="justify">    Furthermore, I am drawn to the dynamic and interdisciplinary nature of data analytics, which demands a blend of technical expertise, critical thinking, and domain knowledge. This continuous evolution motivates me to stay abreast of emerging trends, explore advanced methods, and expand my skill set to push the boundaries of what's achievable in the field. Ultimately, my passion lies in data analytics' transformative potential to revolutionize industries, optimize processes, and foster innovation in our increasingly data-centric world.
-                                            </p>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--=============== SERVICES 3 ===============-->
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-apps services__icon"></i>
-                            <h3 class="services__title">Software <br>Development</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">
-                            View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content" style="width: 800px;">
-                                <h4 class="services__modal-title">Software Development</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify">I am particularly passionate about software engineering because it allows me to integrate data science, UX design, data visualization, and cloud computing to create impactful and user-centric solutions. By incorporating data science techniques into software development, I can leverage data-driven insights to enhance functionality, improve user experience, and drive decision-making processes. This fusion of disciplines enables me to build intelligent applications that adapt and evolve based on user interactions and changing data patterns, ultimately leading to more effective and personalized experiences.
-                                     </p>  
-                                     </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify"> TMoreover, integrating data visualization and cloud computing into software engineering workflows amplifies the power and scalability of applications. By employing intuitive visualizations, I can communicate complex information in a clear and compelling manner, empowering users to make informed decisions. Cloud computing services provide the infrastructure needed to store, process, and analyze large volumes of data, enabling real-time insights and seamless scalability. This holistic approach to software engineering not only enhances efficiency and performance but also fosters innovation and agility, positioning me to tackle the challenges of the modern digital landscape with confidence and creativity.
-                                           </p>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="services__container container grid">
-                    <!--=============== SERVICES 1 ===============-->
-                    <div class="services__content">
-                        <div>
-                            <i class="uil  uil-user-plus services__icon"></i>
-                            <h3 class="services__title"> Inclusive <br> Design</h3>
-                        </div>
-                        <span class="button button--flex button--small button--link services__button">
-                            View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content"  style="width: 800px;">
-                                <h4 class="services__modal-title">Inclusive Design</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify">I am deeply passionate about inclusive design as it ensures digital products and services cater to the diverse needs of all users, fostering inclusivity regardless of age, background, or abilities. Embracing inclusive design principles empowers individuals with disabilities, enhances user satisfaction, and cultivates a sense of belonging within the digital space. Considering the end user throughout the development process across data science, software engineering, UX design, and cloud computing services is paramount. 
-                                          
-                                         </p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify"> Placing the end user at the forefront enables the creation of intuitive, user-friendly solutions aligned with user expectations, thereby enhancing usability and overall experience. Prioritizing the end user fosters empathy, accountability, and ethical responsibility, leading to the creation of impactful solutions that positively impact individuals and communities.
-                                            </p>
-                                    </li>
-
-                                    <!-- <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify">I position your company brand.</p>
-                                    </li>  -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--=============== SERVICES 2 ===============-->
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-cloud-check services__icon"></i>
-                            <h3 class="services__title">Cloud <br>  Computing</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">
-                            View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content" style="width: 800px;">
-                                <h4 class="services__modal-title">Cloud Computing</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify">I am deeply drawn to cloud computing services provided by platforms like AWS due to their unparalleled scalability, flexibility, and accessibility. Whether it's for data science, machine learning, software development, or UX design, the cloud offers a vast array of resources and tools that empower innovation and streamline workflows. With on-demand access to computing power, storage, and specialized services, I find myself equipped to tackle complex projects with ease, without the constraints of hardware limitations. The ability to rapidly provision resources and experiment with different configurations allows for agile development and iteration, crucial in dynamic fields like data science and UX design.
-
-
-                                        </p>
-                                    </li>
-                                    <!-- <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify">Web page development.</p>
-                                    </li> -->
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify">Moreover, cloud computing services offer a robust ecosystem of integrated solutions, enabling seamless collaboration and integration across diverse domains. Whether leveraging AI and analytics tools for data-driven insights or utilizing DevOps services for streamlined software development pipelines, the cloud provides a comprehensive suite of services tailored to modern technological needs. Its pay-as-you-go model ensures cost-effectiveness and resource optimization, while its global infrastructure ensures high availability and reliability. Overall, my affinity for cloud computing stems from its transformative potential to revolutionize workflows, accelerate innovation, and drive success across a spectrum of disciplines, making it an indispensable resource in today's digital landscape.</p>
-                                    </li> 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--=============== SERVICES 3 ===============-->
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-pen services__icon"></i>
-                            <h3 class="services__title">Collaboration</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">
-                            View More 
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="services__modal">
-                            <div class="services__modal-content" style="width: 800px;">
-                                <h4 class="services__modal-title">Collaboration</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-    
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify">I am genuinely enthusiastic about collaboration with individuals across various fields due to the enriching experiences and innovative outcomes it fosters. By actively engaging with cross-functional teams, such as data engineers, cloud architects, and business stakeholders, I have witnessed firsthand the power of collective expertise in driving impactful solutions. Through open communication and the exchange of knowledge and ideas, I have contributed to the creation of holistic data solutions that align seamlessly with business objectives. As a collaborative problem solver, I value input from diverse perspectives and actively seek opportunities to incorporate them into our projects, resulting in innovative approaches and robust data models that push the boundaries of what's achievable.
-
-
-                                        </p>
-                                      
-                                     </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p align="justify">My dedication to collaboration extends beyond mere cooperation; it is rooted in my belief in the transformative potential of collective efforts. By actively managing and coordinating my contributions within cross-functional projects, I ensure the successful delivery of initiatives while fostering a collaborative environment that inspires creativity and innovation. Through collaboration, I am able to leverage the diverse expertise of my peers, driving continuous improvement and achieving outcomes that exceed expectations.</p>
-                                    </li> 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>              
-            </section>
-
-          
-
-
-        <!--========== SCROLL TOP ==========-->
-        <a href="#" class="scrollup" id="scroll-top">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a>
-
-        <!--==================== SWIPER JS ====================-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
-
-        <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
-    </body>
+</body>
 </html>
