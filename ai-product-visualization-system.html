@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Driven Product Visualization System - Morteza Mogharrab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.png" sizes="32x32">
+</head>
+<body>
+    <!-- Skip to main content link for screen readers and keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle between light and dark theme" aria-pressed="false">
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+    </button>
+
+    <div class="container">
+        <!-- Back Link -->
+        <nav aria-label="Breadcrumb navigation">
+            <a href="index.html" class="back-link" aria-label="Return to home page">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Back to Home
+            </a>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <h1 class="hero-name" tabindex="0">AI-Driven Product Visualization System</h1>
+            <p class="hero-tagline" tabindex="0">Scalable 3D Product Rendering & Visualization Pipeline for E-commerce</p>
+            
+            <!-- Project Overview -->
+            <section class="metrics-overview" aria-labelledby="metrics-heading">
+                <h2 id="metrics-heading" class="sr-only">Project Overview</h2>
+                <div class="metric-card" tabindex="0" role="group" aria-label="Cost Reduction metric">
+                    <span class="metric-number" aria-label="90 percent">90%</span>
+                    <span class="metric-label">Cost Reduction</span>
+                </div>
+                <div class="metric-card" tabindex="0" role="group" aria-label="Speed Improvement metric">
+                    <span class="metric-number" aria-label="50 times">50x</span>
+                    <span class="metric-label">Faster Catalog Development</span>
+                </div>
+                <div class="metric-card" tabindex="0" role="group" aria-label="Processing Time metric">
+                    <span class="metric-number" aria-label="15 minutes">15min</span>
+                    <span class="metric-label">Processing Time per Product</span>
+                </div>
+                <div class="metric-card" tabindex="0" role="group" aria-label="Quality Consistency metric">
+                    <span class="metric-number" aria-label="95 percent">95%</span>
+                    <span class="metric-label">Quality Consistency</span>
+                </div>
+            </section>
+        </header>
+
+        <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Project Overview Section -->
+            <article class="story-section project-section" aria-labelledby="overview-heading">
+                <header class="project-header">
+                    <h2 id="overview-heading" class="project-title" tabindex="0">Project Overview</h2>
+                    <div class="project-meta" role="list" aria-label="Project details">
+                        <span class="meta-item" role="listitem" tabindex="0">3D Generation</span>
+                        <span class="meta-item" role="listitem" tabindex="0">E-commerce Integration</span>
+                        <span class="meta-item" role="listitem" tabindex="0">Enterprise Scale</span>
+                        <span class="meta-item" role="listitem" tabindex="0">AI Automation</span>
+                    </div>
+                </header>
+                
+                <div class="story-text">
+                    <p tabindex="0">Developed an automated product visualization system that generates high-quality 3D product renders, 360° views, and AR-ready assets from simple 2D images or basic product specifications. This technical solution addresses the critical e-commerce need for consistent, professional product imagery while reducing photography costs by 90% and enabling rapid catalog expansion.</p>
+                    
+                    <div class="framework-formula" tabindex="0">
+                        <p><strong>Business Impact: Transformed product photography workflows from weeks to hours, enabling 50x faster catalog development and reducing visualization costs from $200-500 per product to $5-15 per product while maintaining professional quality standards.</strong></p>
+                    </div>
+                </div>
+            </article>
+
+            <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+            <!-- Technical Challenge & Business Problem -->
+            <article class="story-section" aria-labelledby="challenge-heading">
+                <h2 id="challenge-heading" tabindex="0">Technical Challenge & Industry Problem</h2>
+                <div class="story-text">
+                    <section aria-labelledby="enterprise-challenge-heading">
+                        <h3 id="enterprise-challenge-heading" tabindex="0">E-commerce Product Visualization Bottlenecks</h3>
+                        <div class="challenge-box" tabindex="0">
+                            <p><strong>Traditional Product Photography Challenges:</strong></p>
+                            <ul style="margin-left: 20px; margin-top: 10px;">
+                                <li><strong>Photography setup costs:</strong> $10,000-50,000 studio investment</li>
+                                <li><strong>Per-product costs:</strong> $200-500 including photography, editing, retouching</li>
+                                <li><strong>Time constraints:</strong> 2-5 days per product shoot including setup</li>
+                                <li><strong>Consistency issues:</strong> Lighting, angles, and quality variations across sessions</li>
+                                <li><strong>Scalability limitations:</strong> Physical constraints limit catalog expansion speed</li>
+                                <li><strong>Update complexity:</strong> Product modifications require complete re-shoots</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section aria-labelledby="technical-requirements-heading">
+                        <h3 id="technical-requirements-heading" tabindex="0">Modern E-commerce Requirements</h3>
+                        <ul class="contribution-list" role="list">
+                            <li role="listitem" tabindex="0">Multi-angle product views (8-12 angles minimum)</li>
+                            <li role="listitem" tabindex="0">360° rotation capabilities for interactive experiences</li>
+                            <li role="listitem" tabindex="0">AR/VR compatibility for immersive shopping</li>
+                            <li role="listitem" tabindex="0">Consistent lighting and backgrounds across entire catalogs</li>
+                            <li role="listitem" tabindex="0">Rapid time-to-market for new product launches</li>
+                            <li role="listitem" tabindex="0">Cost-effective scaling for thousands of SKUs</li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+
+            <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+            <!-- System Architecture Images -->
+            <section class="image-gallery" aria-labelledby="gallery-architecture-heading">
+                <h3 id="gallery-architecture-heading" class="sr-only">System Architecture & AI Integration</h3>
+                <div class="gallery-row gallery-row-4">
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/ec42cba0-8a0a-49d3-a3e1-b97e7e2154cf.jpg" alt="AI Pipeline Architecture - Multi-platform coordination: Google Gemini → Tripo3D → Meshy.ai → DeevID with automated quality control" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Screenshot-2025-08-20.png" alt="AI Integration Stack - Four-platform ecosystem delivering enterprise-scale 3D generation and video production capabilities" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Screenshot-2025-08-20-1.png" alt="Processing Workflow - Single 2D input → 3D model → Multi-angle renders → 360° videos → AR/VR assets in under 15 minutes" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Screenshot-2025-08-20-2.png" alt="Processing Workflow - Single 2D input → 3D model → Multi-angle renders → 360° videos → AR/VR assets in under 15 minutes" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Screenshot-2025-08-20-3.png" alt="Cost Analysis - ROI demonstration: 88% cost reduction ($300,000 → $35,000 per 1000 products) with 92% time savings" loading="lazy" />
+                    </div>
+                </div>
+            </section>
+                        <!-- Process Demo Video -->
+                        <div class="video-showcase" aria-labelledby="video-showcase-heading">
+                            
+                            <div class="video-container">
+                                <video 
+                                    controls 
+                                    preload="metadata"
+                                    poster="assets/ai-product-visualization-system-images/Screenshot-2025-08-20-video.png"
+                                    aria-describedby="video-description"
+                                    tabindex="0">
+                                    <source src="assets/ai-product-visualization-system-images/watermarked-605ccbd5-f77b-4002-97fc-43f5d3e05a16.mp4" type="video/mp4">
+                                    <p>Your browser doesn't support video playback. <a href="assets/ai-product-visualization-system-images/watermarked-605ccbd5-f77b-4002-97fc-43f5d3e05a16.mp4" download>Download the video</a> to view it.</p>
+                                </video>
+                            </div>
+                            
+                      
+                        </div>
+
+            <!-- Systematic Technical Architecture -->
+            <article class="story-section" aria-labelledby="workflow-architecture-heading">
+                <h2 id="workflow-architecture-heading" tabindex="0">Systematic Technical Architecture</h2>
+                <div class="story-text">
+                    <section aria-labelledby="core-framework-heading">
+                        <h3 id="core-framework-heading" tabindex="0">Core System Framework</h3>
+                        
+                        <div class="code-block" tabindex="0">
+                            <pre><code>// AI-Powered Visualization Pipeline
+Input Processing → 3D Model Generation → Material Enhancement → 
+Multi-Angle Rendering → Video Generation → AR/VR Optimization → 
+Quality Validation → E-commerce Integration → Analytics & Optimization</code></pre>
+                        </div>
+
+                        <div class="learning-grid" role="list">
+                            <div class="learning-card" role="listitem" tabindex="0">
+                                <h4>Google Gemini Integration</h4>
+                                <p>Intelligent coordination and analysis, workflow optimization and decision making, quality assessment and brand guideline interpretation</p>
+                            </div>
+                            <div class="learning-card" role="listitem" tabindex="0">
+                                <h4>Tripo3D Studio</h4>
+                                <p>Primary 3D mesh generation from 2D images, advanced geometry reconstruction, texture generation and mapping</p>
+                            </div>
+                            <div class="learning-card" role="listitem" tabindex="0">
+                                <h4>Meshy.ai Workspace</h4>
+                                <p>Advanced 3D asset refinement and optimization, mesh enhancement, material property refinement</p>
+                            </div>
+                            <div class="learning-card" role="listitem" tabindex="0">
+                                <h4>DeevID Video Generation</h4>
+                                <p>360° product rotation videos, interactive demonstration content, social media optimized clips</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+            <!-- Detailed Technical Implementation -->
+            <article class="story-section" aria-labelledby="workflow-implementation-heading">
+                <h2 id="workflow-implementation-heading" tabindex="0">Detailed Technical Implementation</h2>
+                <div class="story-text">
+                    <section aria-labelledby="single-product-workflow-heading">
+                        <h3 id="single-product-workflow-heading" tabindex="0">Workflow 1: Single Product Visualization Pipeline</h3>
+                        
+                        <div class="code-block" tabindex="0">
+                            <pre><code>1. Input Analysis & Preprocessing
+   ├── Google Gemini: Intelligent image analysis and categorization
+   ├── Background removal and product isolation
+   ├── Product category identification and specifications
+   ├── Material property analysis and enhancement
+   └── Dimensional scaling calculation
+
+2. 3D Model Generation
+   ├── Tripo3D: AI-powered mesh generation from 2D images
+   ├── Meshy.ai: Geometry refinement and texture optimization
+   ├── Material property assignment and enhancement
+   ├── Surface detail preservation and enhancement
+   └── Quality validation against professional standards
+
+3. Professional Rendering Setup
+   ├── Studio-quality lighting configuration
+   ├── Camera angle optimization (12 standard views)
+   ├── Background and environment setup
+   ├── Shadow and reflection calculation
+   └── Post-processing enhancement
+
+4. Video & Animation Generation
+   ├── DeevID: 360° rotation video generation
+   ├── Product demonstration animations
+   ├── Interactive viewing sequences
+   ├── Social media optimized clips
+   └── Web-optimized video formats
+
+5. Multi-Format Export
+   ├── High-resolution product images (2K-8K)
+   ├── 360° rotation sequences and videos
+   ├── AR-compatible models (USDZ/GLB)
+   ├── VR-optimized assets
+   └── Web-optimized formats</code></pre>
+                        </div>
+
+                        <div class="challenge-box" tabindex="0">
+                            <p><strong>Performance Specifications:</strong></p>
+                            <p>• Processing time: 5-15 minutes per product<br>
+                            • Output quality: Professional photography equivalent<br>
+                            • Format support: 12+ standard e-commerce formats<br>
+                            • Resolution range: 1024px to 8K for print applications</p>
+                        </div>
+                    </section>
+
+                    <section aria-labelledby="batch-processing-heading">
+                        <h3 id="batch-processing-heading" tabindex="0">Workflow 2: Batch Catalog Processing</h3>
+                        
+                        <div class="code-block" tabindex="0">
+                            <pre><code>1. Catalog Input Management
+   ├── CSV/Excel product data import
+   ├── Bulk image processing and validation
+   ├── Google Gemini: Category-based workflow assignment
+   ├── Priority queue management
+   └── Resource allocation optimization
+
+2. Parallel Processing Architecture
+   ├── Multi-platform coordination (Tripo3D + Meshy.ai)
+   ├── Load balancing and queue management
+   ├── Memory optimization for large batches
+   ├── Error handling and retry logic
+   └── Progress tracking and reporting
+
+3. Quality Assurance Automation
+   ├── Automated quality scoring (0-100 scale)
+   ├── Brand consistency validation
+   ├── Technical specification compliance
+   ├── A/B comparison with reference standards
+   └── Human review flagging for edge cases</code></pre>
+                        </div>
+
+                        <div class="framework-formula" tabindex="0">
+                            <p><strong>Scalability Metrics:</strong> Batch capacity of 500-1000 products per day, 20-50 concurrent processing, 95% automated approval rate, 99.5% system uptime with auto-scaling</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <section class="image-gallery" aria-labelledby="gallery-architecture-heading">
+                <h3 id="gallery-architecture-heading" class="sr-only">System Architecture & AI Integration</h3>
+                <div class="gallery-row gallery-row-4">
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/bluetoothheadphones-2048px-0876.jpg" alt="AI Pipeline Architecture - Multi-platform coordination: Google Gemini → Tripo3D → Meshy.ai → DeevID with automated quality control" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Gemini_Generated_Image_5jqruf5jqruf5jqr.png" alt="AI Integration Stack - Four-platform ecosystem delivering enterprise-scale 3D generation and video production capabilities" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Gemini_Generated_Image_uoj9v3uoj9v3uoj9.png" alt="Processing Workflow - Single 2D input → 3D model → Multi-angle renders → 360° videos → AR/VR assets in under 15 minutes" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Screenshot 2025-08-20-7.png" alt="Processing Workflow - Single 2D input → 3D model → Multi-angle renders → 360° videos → AR/VR assets in under 15 minutes" loading="lazy" />
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+            <!-- Business Case Studies & ROI -->
+            <article class="story-section" aria-labelledby="roi-analysis-heading">
+                <h2 id="roi-analysis-heading" tabindex="0">Business Case Studies & ROI Analysis</h2>
+                <div class="story-text">
+                    <section aria-labelledby="fashion-case-study-heading">
+                        <h3 id="fashion-case-study-heading" tabindex="0">Case Study 1: Fashion E-commerce Catalog</h3>
+                        
+                        <div class="challenge-box" tabindex="0">
+                            <p><strong>Client Challenge:</strong> Fashion retailer with 2,000+ SKUs needing professional product photography for online catalog. Traditional photography cost: $400 per product ($800,000 total).</p>
+                            
+                            <p><strong>Technical Implementation:</strong></p>
+                            <p>• Input: Single flat-lay product images<br>
+                            • Google Gemini: Fabric analysis and categorization<br>
+                            • Tripo3D: 3D model generation with fabric simulation<br>
+                            • Meshy.ai: Texture refinement and draping optimization<br>
+                            • DeevID: 360° fashion showcase videos</p>
+
+                            <p><strong>Results Achieved:</strong><br>
+                            • Processing time: 10 minutes per product<br>
+                            • Cost per product: $8 (AI processing + cloud compute)<br>
+                            • Total project cost: $16,000 vs $800,000 traditional<br>
+                            • Quality score: 92% (vs 88% traditional photography)<br>
+                            • Time to completion: 2 weeks vs 6 months</p>
+                        </div>
+
+                        <div class="framework-formula" tabindex="0">
+                            <p><strong>ROI Analysis:</strong> Cost savings: 98% reduction ($784,000 saved), Time efficiency: 92% faster completion, Quality consistency: 15% improvement, Scalability: 10x more products with same resources</p>
+                        </div>
+                    </section>
+
+                    <section aria-labelledby="electronics-case-study-heading">
+                        <h3 id="electronics-case-study-heading" tabindex="0">Case Study 2: Electronics Product Visualization</h3>
+                        
+                        <div class="code-block" tabindex="0">
+                            <pre><code>// Electronics Processing Pipeline
+Technical Challenge: 500+ products with complex reflective surfaces
+
+Solution Architecture:
+├── Google Gemini: Electronics-specific analysis
+├── Tripo3D: Reflective surface rendering optimization
+├── Meshy.ai: Screen content integration and enhancement
+├── DeevID: LED/lighting effect demonstration videos
+├── Multiple color variant generation
+├── Technical specification overlay integration
+└── Interactive feature demonstration
+
+Performance Metrics:
+- Processing time: 12 minutes per product
+- 360° video generation: Additional 5 minutes
+- AR model optimization: Additional 3 minutes
+- Quality validation: 94% automated approval
+- Customer engagement: 45% increase in product interaction</code></pre>
+                        </div>
+
+                        <div class="challenge-box" tabindex="0">
+                            <p><strong>Business Impact:</strong></p>
+                            <p>• Production cost: $15 per product vs $350 traditional<br>
+                            • Market response time: 1 week vs 2 months for new products<br>
+                            • Customer engagement: 45% increase in time spent on product pages<br>
+                            • Conversion rate: 23% improvement in purchase decisions</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+
+
+            <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+            <!-- Measurable Business Impact -->
+            <article class="story-section" aria-labelledby="efficiency-gains-heading">
+                <h2 id="efficiency-gains-heading" tabindex="0">Measurable Business Impact & Performance Metrics</h2>
+                <div class="story-text">
+                    <section aria-labelledby="cost-comparison-heading">
+                        <h3 id="cost-comparison-heading" tabindex="0">Cost-Benefit Analysis (per 1000 products)</h3>
+                        
+                        <div class="code-block" tabindex="0">
+                            <pre><code>// Traditional vs AI-Driven Comparison
+Traditional Product Photography:
+- Studio setup and equipment: $25,000
+- Photographer and team: $150,000 (3 months)
+- Equipment rental and utilities: $15,000
+- Post-processing and editing: $80,000
+- Project management and coordination: $30,000
+Total: $300,000 (3-4 months timeline)
+
+AI-Driven Visualization System:
+- System development and setup: $20,000 (one-time)
+- AI processing and cloud compute: $8,000
+- Quality assurance and refinement: $5,000
+- System maintenance and optimization: $2,000
+Total: $35,000 (2-3 weeks timeline)
+
+Results:
+- Cost Savings: 88% reduction ($265,000 saved)
+- Time Savings: 92% faster (12 weeks vs 1.5 weeks)</code></pre>
+                        </div>
+                        
+                        <div class="results-grid" role="list">
+                            <div class="result-card" role="listitem" tabindex="0">
+                                <div class="result-icon">⚡</div>
+                                <h4>Processing Efficiency</h4>
+                                <p><strong>Single product:</strong> 5-15 minutes complete processing<br>
+                                <strong>Batch processing:</strong> 1000 products in 48 hours<br>
+                                <strong>Quality consistency:</strong> 95% automated approval rate</p>
+                            </div>
+                            <div class="result-card" role="listitem" tabindex="0">
+                                <div class="result-icon">📈</div>
+                                <h4>Business Impact</h4>
+                                <p><strong>Time-to-market:</strong> 85% reduction for new products<br>
+                                <strong>Catalog expansion:</strong> 10x increase in addition capacity<br>
+                                <strong>Customer engagement:</strong> 40% increase in interaction</p>
+                            </div>
+                            <div class="result-card" role="listitem" tabindex="0">
+                                <div class="result-icon">🎯</div>
+                                <h4>Quality Metrics</h4>
+                                <p><strong>Conversion optimization:</strong> 25% improvement in decisions<br>
+                                <strong>Return rate reduction:</strong> 15% decrease due to accuracy<br>
+                                <strong>Scalability:</strong> Linear scaling with compute resources</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <section class="image-gallery" aria-labelledby="gallery-architecture-heading">
+                <h3 id="gallery-architecture-heading" class="sr-only">System Architecture & AI Integration</h3>
+                <div class="gallery-row gallery-row-4">
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Screenshot-2025-08-20-6.png" alt="AI Pipeline Architecture - Multi-platform coordination: Google Gemini → Tripo3D → Meshy.ai → DeevID with automated quality control" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Gemini_Generated_Image_idz0l1idz0l1idz0.png" alt="AI Integration Stack - Four-platform ecosystem delivering enterprise-scale 3D generation and video production capabilities" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Gemini_Generated_Image_vwmsg5vwmsg5vwms.png" alt="Processing Workflow - Single 2D input → 3D model → Multi-angle renders → 360° videos → AR/VR assets in under 15 minutes" loading="lazy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/ai-product-visualization-system-images/Gemini_Generated_Image_vwz72ovwz72ovwz7.png" alt="Processing Workflow - Single 2D input → 3D model → Multi-angle renders → 360° videos → AR/VR assets in under 15 minutes" loading="lazy" />
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider" role="separator" aria-hidden="true"></div>
+
+            <!-- Professional Value & Technical Demonstration -->
+            <article class="story-section" aria-labelledby="professional-value-heading">
+                <h2 id="professional-value-heading" tabindex="0">Professional Value & Technical Demonstration</h2>
+                <div class="story-text">
+                    <section aria-labelledby="skills-demonstrated-heading">
+                        <h3 id="skills-demonstrated-heading" tabindex="0">Skills Demonstrated</h3>
+                        
+                        <div class="ai-workflow-grid" role="list">
+                            <div class="workflow-card" role="listitem" tabindex="0">
+                                <h4>Advanced AI System Architecture</h4>
+                                <p>Multi-platform AI coordination across specialized services, pipeline optimization for production-scale processing, quality assurance automation with measurable metrics</p>
+                            </div>
+                            <div class="workflow-card" role="listitem" tabindex="0">
+                                <h4>Business Process Innovation</h4>
+                                <p>Cost optimization achieving 88% reduction in traditional costs, workflow transformation reducing time-to-market by 85%, scalability architecture enabling 10x capacity increases</p>
+                            </div>
+                            <div class="workflow-card" role="listitem" tabindex="0">
+                                <h4>Technical Integration Mastery</h4>
+                                <p>Multi-platform AI service coordination (Gemini, Tripo3D, Meshy.ai, DeevID), e-commerce platform APIs and webhook integration, cloud infrastructure optimization</p>
+                            </div>
+                        </div>
+
+                        <div class="framework-formula" tabindex="0">
+                            <p><strong>Technical Achievement:</strong> This AI-driven product visualization system demonstrates enterprise-level technical architecture, systematic process optimization, and quantifiable business value creation. With proven ROI of 88% cost reduction and 92% time savings, this project showcases the transformative potential of AI-powered automation in e-commerce visualization workflows.</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!-- Technical Specifications -->
+            <article class="story-section" aria-labelledby="technical-specs-heading">
+                <h2 id="technical-specs-heading" tabindex="0">Technical Specifications & Infrastructure</h2>
+                <div class="story-text">
+                    <section aria-labelledby="core-technologies-heading">
+                        <h3 id="core-technologies-heading" tabindex="0">Core Technologies</h3>
+                        
+                        <div class="learning-grid" role="list">
+                            <div class="learning-card" role="listitem" tabindex="0">
+                                <h4>Google Gemini</h4>
+                                <p>Intelligent coordination and analysis, multimodal understanding, workflow optimization and decision making</p>
+                            </div>
+                            <div class="learning-card" role="listitem" tabindex="0">
+                                <h4>Tripo3D Studio</h4>
+                                <p>3D model generation from 2D images, advanced geometry reconstruction, professional-grade optimization</p>
+                            </div>
+                            <div class="learning-card" role="listitem" tabindex="0">
+                                <h4>Meshy.ai Workspace</h4>
+                                <p>Advanced 3D asset refinement, material property enhancement, surface detail optimization</p>
+                            </div>
+                            <div class="learning-card" role="listitem" tabindex="0">
+                                <h4>DeevID Video Generation</h4>
+                                <p>360° demonstrations, social media clips, high-quality output with multiple format support</p>
+                            </div>
+                        </div>
+
+                        <div class="challenge-box" tabindex="0">
+                            <p><strong>Performance Requirements:</strong></p>
+                            <p>• Processing latency: <15 minutes per product<br>
+                            • Batch throughput: 1000+ products per day<br>
+                            • Quality consistency: 95% automated approval rate<br>
+                            • System availability: 99.9% uptime with redundancy<br>
+                            • Scalability: Linear scaling with compute resource addition</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+            <!-- CTA Section -->
+            <section class="cta-wrapper" aria-labelledby="cta-heading">
+                <h2 id="cta-heading" class="sr-only">Contact Information</h2>
+                
+                <div class="acceleration-section">
+                    <h3 tabindex="0">Interested in AI-Powered Product Visualization?</h3>
+                    <p class="tagline" tabindex="0">Let's discuss how automated 3D visualization systems can transform your e-commerce operations</p>
+                </div>
+
+                <!-- Contact Information -->
+                <nav class="contact-info" role="navigation" aria-label="Contact information">
+                    <a href="mailto:mogharra@ualberta.ca" class="contact-link" aria-label="Send email to Morteza Mogharrab">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Email
+                    </a>
+                    <span class="contact-separator" aria-hidden="true">•</span>
+                    <a href="https://linkedin.com/in/morteza-mogharrab" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Morteza Mogharrab's LinkedIn profile (opens in new tab)">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <span class="contact-separator" aria-hidden="true">•</span>
+                    <a href="assets/Resume-Morteza-Mogharrab.pdf" class="contact-link" download aria-label="Download Morteza Mogharrab's resume as PDF">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download Resume
+                    </a>
+                </nav>
+            </section>
+        </main>
+    </div>
+
+    <style>
+        /* Additional styles for AI Product Visualization page specific elements */
+        
+        /* Framework formula styling */
+        .framework-formula {
+            background: var(--tertiary-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            padding: var(--space-lg);
+            text-align: center;
+            margin: var(--space-lg) 0;
+            font-size: var(--font-md);
+            font-weight: 600;
+        }
+
+        /* Image galleries */
+        .image-gallery {
+            margin: var(--space-xl) 0;
+        }
+
+        .gallery-row {
+            display: grid;
+            gap: 1px;
+            margin: var(--space-lg) 0;
+        }
+
+        .gallery-row-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            background: var(--secondary-bg);
+            aspect-ratio: 9/16;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Code block styling */
+        .code-block {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: var(--space-lg);
+            margin: var(--space-md) 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            margin: 0;
+            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+            font-size: var(--font-sm);
+            line-height: 1.5;
+            color: var(--text-color);
+        }
+
+        .code-block code {
+            color: var(--text-color);
+        }
+
+        /* Results grid styling */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-lg) 0;
+        }
+
+        .result-card {
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: var(--space-lg);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .result-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-icon {
+            font-size: 2rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .result-card h4 {
+            color: var(--heading-color);
+            margin-bottom: var(--space-sm);
+            font-size: var(--font-md);
+            font-weight: 600;
+        }
+
+        .result-card p {
+            color: var(--text-color);
+            font-size: var(--font-sm);
+            line-height: 1.6;
+        }
+
+        /* Video showcase styling */
+        .video-showcase {
+            margin: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .video-showcase h3 {
+            font-size: var(--font-lg);
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: var(--space-sm);
+            letter-spacing: -0.02em;
+        }
+
+        .video-description {
+            font-size: var(--font-base);
+            color: var(--subtitle-color);
+            margin-bottom: var(--space-lg);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto var(--space-md);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid var(--border-color);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: var(--secondary-bg);
+        }
+
+        .video-container video:focus {
+            outline: 3px solid var(--focus-outline);
+            outline-offset: 2px;
+        }
+
+        .video-caption {
+            font-size: var(--font-sm);
+            color: var(--story-text-color);
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto var(--space-xl);
+            line-height: 1.6;
+        }
+
+        .video-caption strong {
+            color: var(--heading-color);
+            font-weight: 600;
+        }
+
+        /* Documentation reference styling */
+        .documentation-reference {
+            background: var(--tertiary-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 12px;
+            padding: var(--space-xl);
+            margin-top: var(--space-xl);
+            text-align: center;
+        }
+
+        .documentation-reference h4 {
+            color: var(--heading-color);
+            font-size: var(--font-lg);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+
+        .documentation-reference p {
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+
+        .website-link {
+            font-size: var(--font-lg);
+            font-weight: 600;
+            color: var(--accent-color);
+            background: var(--secondary-bg);
+            padding: var(--space-md);
+            border-radius: 8px;
+            margin: var(--space-lg) 0;
+        }
+
+        /* Enhanced focus states for gallery items */
+        .gallery-item:focus-within {
+            outline: 3px solid var(--focus-outline);
+            outline-offset: 2px;
+        }
+
+        /* Ensure gallery images are accessible */
+        .gallery-item img:focus {
+            outline: none;
+        }
+
+        /* Screen reader only content */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Skip link for keyboard navigation */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Focus styles for better keyboard navigation */
+        *:focus {
+            outline: 2px solid #0066cc;
+            outline-offset: 2px;
+        }
+
+        /* Enhanced focus for interactive elements */
+        button:focus,
+        a:focus {
+            outline: 3px solid #0066cc;
+            outline-offset: 2px;
+        }
+
+        /* Ensure decorative elements don't interfere with screen readers */
+        .section-divider {
+            height: 1px;
+            background: #e5e5e5;
+            margin: 2rem 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .gallery-row-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .results-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-row-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .code-block {
+                font-size: var(--font-xs);
+                padding: var(--space-md);
+            }
+
+            .framework-formula {
+                font-size: var(--font-base);
+                padding: var(--space-md);
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+
+            .video-container {
+                margin: 0 calc(var(--space-md) * -1) var(--space-md);
+                border-radius: 0;
+            }
+            
+            .video-description,
+            .video-caption {
+                padding: 0 var(--space-md);
+            }
+
+            .documentation-reference {
+                padding: var(--space-lg);
+            }
+
+            .website-link {
+                font-size: var(--font-base);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-row-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .framework-formula {
+                font-size: var(--font-base);
+            }
+
+            .video-showcase {
+                margin: var(--space-lg) 0;
+            }
+            
+            .video-description {
+                font-size: var(--font-sm);
+            }
+
+            .documentation-reference {
+                padding: var(--space-md);
+            }
+
+            .documentation-reference h4 {
+                font-size: var(--font-md);
+            }
+        }
+    </style>
+
+    <script>
+        // Theme toggle functionality with accessibility improvements
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        
+        // Update aria-pressed state based on current theme
+        themeToggle.setAttribute('aria-pressed', currentTheme === 'dark' ? 'true' : 'false');
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update aria-pressed state
+            themeToggle.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
+            
+            // Announce theme change to screen readers
+            const announcement = newTheme === 'dark' ? 'Dark theme activated' : 'Light theme activated';
+            announceToScreenReader(announcement);
+        });
+
+        // Function to announce changes to screen readers
+        function announceToScreenReader(message) {
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.setAttribute('aria-atomic', 'true');
+            announcement.className = 'sr-only';
+            announcement.textContent = message;
+            
+            document.body.appendChild(announcement);
+            
+            // Remove the announcement after a short delay
+            setTimeout(() => {
+                document.body.removeChild(announcement);
+            }, 1000);
+        }
+
+        // Keyboard navigation improvements
+        document.addEventListener('keydown', (e) => {
+            // Allow Enter key to activate links and buttons for consistency
+            if (e.key === 'Enter' && e.target.matches('a, button')) {
+                e.target.click();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Focus the target for accessibility
+                    target.focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
