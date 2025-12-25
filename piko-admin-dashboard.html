@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piko Admin Dashboard & Analytics - Morteza Mogharrab</title>
+    <meta name="description" content="Enterprise admin dashboard with real-time analytics, user management, and content moderation. Built with React, TypeScript, Java Spring Boot, and PostgreSQL.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.png" sizes="32x32">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+    </button>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="project-container">
+        <!-- Back Navigation -->
+        <nav class="back-nav">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Portfolio
+            </a>
+        </nav>
+
+        <!-- Project Hero -->
+        <header class="project-hero">
+            <div class="project-badge-hero">Full-Stack Development</div>
+            <h1 class="project-hero-title">Piko Admin Dashboard & Analytics</h1>
+            <p class="project-hero-subtitle">Enterprise Management System for Social Media Platform</p>
+            
+            <!-- Quick Stats Grid -->
+            <div class="hero-stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value">1000+</span>
+                    <span class="stat-label">Daily Active Users</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">300%</span>
+                    <span class="stat-label">Analytics Improvement</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">60%</span>
+                    <span class="stat-label">Admin Time Saved</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">15+</span>
+                    <span class="stat-label">Data Sources</span>
+                </div>
+            </div>
+
+            <div class="confidential-notice">
+                <strong>Note:</strong> This is an internal management system. Screenshots show early development prototypes; the production application is not publicly accessible due to enterprise security requirements.
+            </div>
+        </header>
+
+
+        <main class="project-content">
+            <!-- Project Metadata -->
+            <section class="project-meta-section">
+            <figure class="project-image">
+                <img src="assets/admin-dashboard-preview.jpg" alt="Internal management dashboard interface showing admin controls, analytics charts, user management panels, and content moderation tools" tabindex="0" />
+                <figcaption class="image-caption" tabindex="0">Note: This image illustrates a prototype during the early development phase; the completed application won't be publicly available.</figcaption>
+            </figure>  
+            </section>   
+            <section class="project-meta-section">
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">Enterprise Admin Platform</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Full-Stack Developer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">Jan 2025 - Aug 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team</span>
+                        <span class="meta-value">5+ departments, 3 mentored interns</span>
+                    </div>
+                </div>
+            </section>       
+
+            <!-- Project Overview -->
+            <section class="content-section">
+                <h2>Project Overview</h2>
+                <p class="lead-text">Built from scratch as the central command center for managing PetoKingdom (Piko) social media platform, serving 1000+ daily active users. This enterprise-grade admin dashboard provides comprehensive tools for user management, real-time analytics, content moderation, and platform configuration—enabling data-driven decision-making while maintaining enterprise security standards.</p>
+                
+                <div class="highlight-box">
+                    <h3>Business Impact</h3>
+                    <p><strong>Increased platform insights by 300%</strong> by transforming 15+ disparate data sources into unified, actionable visualizations. <strong>Reduced administrative processing time by 60%</strong> through automated workflows with JWT authentication and role-based access control. Coordinated requirements across 5+ departments while mentoring 3 interns, reducing onboarding time by 40%.</p>
+                </div>
+            </section>
+
+            <!-- The Challenge -->
+            <section class="content-section">
+                <h2>The Challenge</h2>
+                <p>As PetoKingdom prepared for launch, the team needed comprehensive administrative tools to manage users, monitor platform health, and make data-driven decisions. The challenge was creating a powerful yet intuitive admin interface capable of handling real-time monitoring, content moderation, and platform configuration—all while maintaining enterprise-grade security for a system managing sensitive user data.</p>
+                
+                <div class="challenge-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">📊</div>
+                        <h3>Data Fragmentation</h3>
+                        <p>15+ activity sources scattered across microservices with no unified view for decision-making</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">🔒</div>
+                        <h3>Security Requirements</h3>
+                        <p>Enterprise-grade authentication, authorization, and audit logging for admin operations</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">⚡</div>
+                        <h3>Real-Time Processing</h3>
+                        <p>Live dashboards requiring complex SQL queries with JOINs, CTEs, and window functions</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">👥</div>
+                        <h3>Cross-Team Coordination</h3>
+                        <p>Requirements gathering from 5+ departments with diverse technical backgrounds</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Architecture -->
+            <section class="content-section">
+                <h2>System Architecture</h2>
+                
+                <div class="architecture-diagram">
+                    <div class="arch-layer">
+                        <div class="arch-box input">
+                            <h4>1. Frontend Layer</h4>
+                            <p>React 19 + TypeScript + Material-UI</p>
+                            <span class="arch-detail">50+ reusable components, responsive dashboard</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box processing">
+                            <h4>2. API Gateway</h4>
+                            <p>RESTful APIs + JWT Auth</p>
+                            <span class="arch-detail">Secure request routing, token validation</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box generation">
+                            <h4>3. Backend Services</h4>
+                            <p>Java Spring Boot Microservices</p>
+                            <span class="arch-detail">Analytics, User Management, Reports, Email</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box validation">
+                            <h4>4. Data Layer</h4>
+                            <p>PostgreSQL (15+ tables)</p>
+                            <span class="arch-detail">Complex queries, CTEs, window functions</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box output">
+                            <h4>5. Infrastructure</h4>
+                            <p>Docker + AWS</p>
+                            <span class="arch-detail">Containerized deployment, cloud hosting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-block">
+<pre><code>// System Architecture Flow
+Frontend (React/TypeScript) → 
+REST APIs (Spring Boot) → 
+Service Layer (Business Logic) → 
+Repository Layer (JPA) → 
+PostgreSQL Database → 
+AWS Infrastructure</code></pre>
+                </div>
+            </section>
+
+            <!-- Key Contributions -->
+            <section class="content-section">
+                <h2>Key Technical Contributions</h2>
+
+                <!-- Contribution 1: Analytics Platform -->
+                <div class="contribution-block">
+                    <div class="contribution-number">01</div>
+                    <div class="contribution-content">
+                        <h3>Comprehensive Analytics Platform</h3>
+                        <p><strong>Challenge:</strong> Transform 15+ fragmented data sources into actionable real-time dashboards for platform growth and user engagement metrics.</p>
+                        
+                        <p><strong>Solution:</strong> Built complete analytics pipeline processing activity data from multiple microservices:</p>
+                        
+                        <div class="analytics-modules">
+                            <div class="module-card">
+                                <h4>User Analytics</h4>
+                                <ul>
+                                    <li>Active user tracking (DAU/MAU)</li>
+                                    <li>Registration trends with time-series charts</li>
+                                    <li>User growth vs. churn analysis</li>
+                                    <li>Demographics and segmentation</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>Platform Growth</h4>
+                                <ul>
+                                    <li>Monthly/weekly activity growth</li>
+                                    <li>Platform overview metrics</li>
+                                    <li>Species distribution analysis</li>
+                                    <li>Peak activity hours/days</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>Content Analytics</h4>
+                                <ul>
+                                    <li>Post creation metrics</li>
+                                    <li>Engagement by action type</li>
+                                    <li>Content quality indicators</li>
+                                    <li>Zero-engagement tracking</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>Activity Insights</h4>
+                                <ul>
+                                    <li>Daily/weekly activity distribution</li>
+                                    <li>Peak posting hours analysis</li>
+                                    <li>Average posts per pet</li>
+                                    <li>Comprehensive activity summaries</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="code-block">
+<pre><code>// Complex SQL with CTEs and Window Functions
+@Query("""
+    WITH monthly_stats AS (
+        SELECT 
+            DATE_FORMAT(created_at, '%Y-%m') as month,
+            COUNT(DISTINCT user_id) as active_users,
+            COUNT(*) as total_posts,
+            LAG(COUNT(DISTINCT user_id)) OVER (ORDER BY DATE_FORMAT(created_at, '%Y-%m')) as prev_month_users
+        FROM activities
+        WHERE created_at >= :startDate
+        GROUP BY month
+    )
+    SELECT 
+        month,
+        active_users,
+        total_posts,
+        ROUND(((active_users - prev_month_users) / prev_month_users) * 100, 2) as growth_rate
+    FROM monthly_stats
+    ORDER BY month DESC
+    """)
+List<MonthlyActivityGrowthDto> getMonthlyGrowth(@Param("startDate") LocalDateTime startDate);</code></pre>
+                        </div>
+
+                        <div class="performance-metrics">
+                            <div class="perf-metric">
+                                <span class="perf-number">300%</span>
+                                <span class="perf-label">Insights increase</span>
+                            </div>
+                            <div class="perf-metric">
+                                <span class="perf-number">15+</span>
+                                <span class="perf-label">Data sources unified</span>
+                            </div>
+                            <div class="perf-metric">
+                                <span class="perf-number">Real-time</span>
+                                <span class="perf-label">Dashboard updates</span>
+                            </div>
+                        </div>
+
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Enabled data-driven decision-making with comprehensive visibility into platform health, user behavior, and growth trends—transforming scattered data into strategic insights.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 2: Enterprise Security -->
+                <div class="contribution-block">
+                    <div class="contribution-number">02</div>
+                    <div class="contribution-content">
+                        <h3>Enterprise-Grade Authentication & Authorization</h3>
+                        <p><strong>Challenge:</strong> Implement secure authentication system with multi-role authorization, audit logging, and comprehensive security measures for admin operations.</p>
+                        
+                        <p><strong>Solution:</strong> Built complete security infrastructure using Spring Security and JWT:</p>
+                        
+                        <div class="security-features">
+                            <div class="security-card">
+                                <h4>JWT Authentication</h4>
+                                <ul>
+                                    <li>Stateless token-based auth</li>
+                                    <li>Access + refresh token rotation</li>
+                                    <li>Secure password hashing (BCrypt)</li>
+                                    <li>Token expiration management</li>
+                                </ul>
+                            </div>
+                            <div class="security-card">
+                                <h4>Role-Based Access Control</h4>
+                                <ul>
+                                    <li>4+ role hierarchy (Admin, Super Admin, Moderator, Viewer)</li>
+                                    <li>Granular permission system</li>
+                                    <li>Route-level authorization</li>
+                                    <li>Resource-based access control</li>
+                                </ul>
+                            </div>
+                            <div class="security-card">
+                                <h4>Security Hardening</h4>
+                                <ul>
+                                    <li>Account lockout after failed attempts</li>
+                                    <li>Password complexity requirements</li>
+                                    <li>HTTPS enforcement</li>
+                                    <li>CORS configuration</li>
+                                </ul>
+                            </div>
+                            <div class="security-card">
+                                <h4>Audit & Compliance</h4>
+                                <ul>
+                                    <li>Comprehensive audit logging</li>
+                                    <li>Admin action tracking</li>
+                                    <li>Security event monitoring</li>
+                                    <li>Compliance reporting</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="code-block">
+<pre><code>// Spring Security Configuration
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+    
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+            .csrf(AbstractHttpConfigurer::disable)
+            .sessionManagement(session -> 
+                session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/api/admin/**").hasAnyRole("ADMIN", "SUPER_ADMIN")
+                .requestMatchers("/api/users/**").hasRole("SUPER_ADMIN")
+                .anyRequest().authenticated()
+            )
+            .addFilterBefore(jwtAuthenticationFilter, 
+                UsernamePasswordAuthenticationFilter.class);
+        
+        return http.build();
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Established enterprise-grade security foundation resolving vulnerabilities, enabling secure admin user management, and ensuring compliance with security best practices.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 3: User Management System -->
+                <div class="contribution-block">
+                    <div class="contribution-number">03</div>
+                    <div class="contribution-content">
+                        <h3>Complete User Management System</h3>
+                        <p><strong>Challenge:</strong> Build comprehensive admin interface for user operations, role management, and administrative workflows supporting 1000+ daily active users.</p>
+                        
+                        <p><strong>Solution:</strong> Developed full CRUD system with advanced filtering, pagination, and bulk operations:</p>
+                        
+                        <div class="user-mgmt-features">
+                            <div class="feature-column">
+                                <h4>Core Operations</h4>
+                                <ul class="requirement-list">
+                                    <li>Create, Read, Update, Delete users</li>
+                                    <li>Role assignment and permission management</li>
+                                    <li>Account status control (active/suspended/banned)</li>
+                                    <li>Password reset and forced password change</li>
+                                    <li>Bulk operations for efficiency</li>
+                                </ul>
+                            </div>
+                            <div class="feature-column">
+                                <h4>Advanced Features</h4>
+                                <ul class="requirement-list">
+                                    <li>Advanced filtering (role, status, date range)</li>
+                                    <li>Server-side pagination with DataGrid</li>
+                                    <li>Search across multiple fields</li>
+                                    <li>Export functionality (CSV, Excel)</li>
+                                    <li>User statistics and activity tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="code-block">
+<pre><code>// User Management Service with Pagination
+@Service
+public class UserService {
+    
+    public Page<UserResponse> getUsers(
+            String search,
+            Role role,
+            UserStatus status,
+            Pageable pageable) {
+        
+        Specification<User> spec = Specification
+            .where(UserSpecification.hasSearchTerm(search))
+            .and(UserSpecification.hasRole(role))
+            .and(UserSpecification.hasStatus(status));
+        
+        return userRepository.findAll(spec, pageable)
+            .map(this::mapToUserResponse);
+    }
+    
+    @Transactional
+    public UserResponse updateUserRole(Long userId, Role newRole) {
+        User user = findUserById(userId);
+        
+        // Audit log
+        auditService.log(
+            AuditAction.UPDATE_USER_ROLE,
+            userId,
+            getCurrentAdmin(),
+            Map.of("oldRole", user.getRole(), "newRole", newRole)
+        );
+        
+        user.setRole(newRole);
+        return mapToUserResponse(userRepository.save(user));
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="performance-metrics">
+                            <div class="perf-metric">
+                                <span class="perf-number">60%</span>
+                                <span class="perf-label">Time saved</span>
+                            </div>
+                            <div class="perf-metric">
+                                <span class="perf-number">1000+</span>
+                                <span class="perf-label">Users managed</span>
+                            </div>
+                            <div class="perf-metric">
+                                <span class="perf-number">4+</span>
+                                <span class="perf-label">Role levels</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 4: Content Moderation -->
+                <div class="contribution-block">
+                    <div class="contribution-number">04</div>
+                    <div class="contribution-content">
+                        <h3>Automated Content Moderation System</h3>
+                        <p><strong>Challenge:</strong> Streamline content moderation workflow for handling reports across posts, messages, events, and user profiles.</p>
+                        
+                        <p><strong>Solution:</strong> Built comprehensive report handling system with advanced filtering and bulk actions:</p>
+                        
+                        <div class="moderation-capabilities">
+                            <div class="capability-card">
+                                <h4>Report Management</h4>
+                                <p>Multi-tab interface for different report types (Posts, Messages, Users, Events, Technical, Other) with time-based filtering and priority sorting.</p>
+                            </div>
+                            <div class="capability-card">
+                                <h4>Advanced Filtering</h4>
+                                <p>Filter by time period, report type, entity type, and status with server-side pagination for efficient processing of large datasets.</p>
+                            </div>
+                            <div class="capability-card">
+                                <h4>Quick Actions</h4>
+                                <p>Ban users, delete content, dismiss reports, and view detailed information—all with confirmation dialogs and audit trails.</p>
+                            </div>
+                            <div class="capability-card">
+                                <h4>Analytics Integration</h4>
+                                <p>Statistical dashboards showing moderation trends, response times, and content quality metrics for data-driven decisions.</p>
+                            </div>
+                        </div>
+
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Reduced content moderation processing time by 50% through automated review workflows, bulk actions, and advanced filtering—enabling moderators to handle reports efficiently at scale.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 5: Email Communication -->
+                <div class="contribution-block">
+                    <div class="contribution-number">05</div>
+                    <div class="contribution-content">
+                        <h3>Bulk Email Management System</h3>
+                        <p><strong>Challenge:</strong> Enable marketing and support teams to send targeted bulk emails to user segments without technical knowledge.</p>
+                        
+                        <p><strong>Solution:</strong> Integrated AWS SES with user-friendly interface for bulk email campaigns:</p>
+                        
+                        <div class="email-features">
+                            <div class="email-feature">
+                                <strong>User Segmentation</strong>
+                                <p>Target emails by user type, role, or custom recipient lists with real-time count preview</p>
+                            </div>
+                            <div class="email-feature">
+                                <strong>Template Support</strong>
+                                <p>HTML email templates with variable substitution for personalization</p>
+                            </div>
+                            <div class="email-feature">
+                                <strong>Progress Tracking</strong>
+                                <p>Real-time job progress monitoring with success/failure tracking</p>
+                            </div>
+                            <div class="email-feature">
+                                <strong>AWS SES Integration</strong>
+                                <p>Reliable email delivery via Amazon Simple Email Service with bounce handling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 6: Full-Stack Development -->
+                <div class="contribution-block">
+                    <div class="contribution-number">06</div>
+                    <div class="contribution-content">
+                        <h3>Full-Stack Architecture & Infrastructure</h3>
+                        <p><strong>Challenge:</strong> Design and implement complete system architecture from database schema to frontend components with production-ready infrastructure.</p>
+                        
+                        <p><strong>Solution:</strong> Architected entire stack with modern best practices:</p>
+                        
+                        <div class="fullstack-grid">
+                            <div class="stack-layer">
+                                <h4>Frontend Architecture</h4>
+                                <ul>
+                                    <li>50+ reusable React/TypeScript components</li>
+                                    <li>Material-UI design system</li>
+                                    <li>Redux for state management</li>
+                                    <li>Chart.js for data visualization</li>
+                                    <li>Responsive grid layouts</li>
+                                    <li>Dark theme support</li>
+                                </ul>
+                            </div>
+                            <div class="stack-layer">
+                                <h4>Backend Services</h4>
+                                <ul>
+                                    <li>Spring Boot microservices architecture</li>
+                                    <li>RESTful API design with OpenAPI docs</li>
+                                    <li>JPA/Hibernate for ORM</li>
+                                    <li>Service layer with business logic</li>
+                                    <li>DTO pattern for data transfer</li>
+                                    <li>Exception handling framework</li>
+                                </ul>
+                            </div>
+                            <div class="stack-layer">
+                                <h4>Database Design</h4>
+                                <ul>
+                                    <li>15+ normalized PostgreSQL tables</li>
+                                    <li>Complex relationships with foreign keys</li>
+                                    <li>Indexes for query optimization</li>
+                                    <li>CTEs and window functions</li>
+                                    <li>Time-series data handling</li>
+                                    <li>Migration scripts</li>
+                                </ul>
+                            </div>
+                            <div class="stack-layer">
+                                <h4>Infrastructure & DevOps</h4>
+                                <ul>
+                                    <li>Docker containerization</li>
+                                    <li>AWS cloud deployment</li>
+                                    <li>CI/CD with GitHub Actions</li>
+                                    <li>Environment-based configuration</li>
+                                    <li>Health checks and monitoring</li>
+                                    <li>Logging and error tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology Stack -->
+            <section class="content-section">
+                <h2>Complete Technology Stack</h2>
+                
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>Frontend</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">React 19</span>
+                            <span class="tech-pill">TypeScript</span>
+                            <span class="tech-pill">Material-UI (MUI)</span>
+                            <span class="tech-pill">Redux</span>
+                            <span class="tech-pill">Chart.js</span>
+                            <span class="tech-pill">Plotly.js</span>
+                            <span class="tech-pill">Axios</span>
+                            <span class="tech-pill">React Router</span>
+                            <span class="tech-pill">date-fns</span>
+                            <span class="tech-pill">Lodash</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Backend</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Java 21</span>
+                            <span class="tech-pill">Spring Boot 3</span>
+                            <span class="tech-pill">Spring Security</span>
+                            <span class="tech-pill">Spring Data JPA</span>
+                            <span class="tech-pill">Hibernate</span>
+                            <span class="tech-pill">JWT (JSON Web Tokens)</span>
+                            <span class="tech-pill">BCrypt</span>
+                            <span class="tech-pill">Maven</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Database & Data</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">PostgreSQL</span>
+                            <span class="tech-pill">HikariCP</span>
+                            <span class="tech-pill">Flyway (migrations)</span>
+                            <span class="tech-pill">SQL (CTEs, Window Functions)</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Cloud & Infrastructure</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">AWS SES</span>
+                            <span class="tech-pill">GitHub Actions</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Development Tools</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Vite</span>
+                            <span class="tech-pill">ESLint</span>
+                            <span class="tech-pill">Prettier</span>
+                            <span class="tech-pill">Jest</span>
+                            <span class="tech-pill">Storybook</span>
+                            <span class="tech-pill">Cursor AI</span>
+                            <span class="tech-pill">GitHub Copilot</span>
+                            <span class="tech-pill">CodeRabbit</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance & Results -->
+            <section class="content-section">
+                <h2>Quantitative Results & Business Impact</h2>
+                
+                <div class="impact-table">
+                    <div class="impact-row header">
+                        <span>Metric</span>
+                        <span>Before</span>
+                        <span>After</span>
+                        <span>Improvement</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Platform Insights</span>
+                        <span>Scattered across 15+ sources</span>
+                        <span>Unified real-time dashboards</span>
+                        <span class="highlight">300% increase</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Admin Processing Time</span>
+                        <span>Manual workflows</span>
+                        <span>Automated with RBAC</span>
+                        <span class="highlight">60% reduction</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Onboarding Time</span>
+                        <span>Extended training required</span>
+                        <span>20+ documentation guides</span>
+                        <span class="highlight">40% reduction</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Content Moderation</span>
+                        <span>Manual review process</span>
+                        <span>Automated filtering + bulk actions</span>
+                        <span class="highlight">50% faster</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Development Velocity</span>
+                        <span>Custom components each time</span>
+                        <span>50+ reusable components</span>
+                        <span class="highlight">40% acceleration</span>
+                    </div>
+                </div>
+
+                <div class="roi-breakdown">
+                    <h3>Key Achievement Highlights</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-icon">📊</div>
+                            <strong>300% Analytics Improvement</strong>
+                            <p>Transformed 15+ data sources into actionable real-time dashboards with Chart.js visualizations</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">⏱️</div>
+                            <strong>60% Time Savings</strong>
+                            <p>Automated administrative workflows with JWT authentication and role-based permissions</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">👥</div>
+                            <strong>1000+ Users Managed</strong>
+                            <p>Scaled platform supporting 1000+ daily active users with comprehensive admin controls</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🚀</div>
+                            <strong>40% Faster Development</strong>
+                            <p>Architected 50+ reusable components reducing time-to-market for new features</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">📚</div>
+                            <strong>40% Faster Onboarding</strong>
+                            <p>Created 20+ comprehensive guides and mentored 3 interns to reduce ramp-up time</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🛡️</div>
+                            <strong>Enterprise Security</strong>
+                            <p>Implemented JWT auth, RBAC, audit logging, and security hardening from ground up</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cross-Functional Impact -->
+            <section class="content-section">
+                <h2>Cross-Functional Leadership & Coordination</h2>
+                
+                <div class="coordination-grid">
+                    <div class="coord-card">
+                        <h3>Requirements Gathering</h3>
+                        <p>Coordinated with 5+ departments (Marketing, Support, Product, Engineering, Operations) to gather requirements, prioritize features, and ensure system met diverse stakeholder needs.</p>
+                    </div>
+                    <div class="coord-card">
+                        <h3>Agile Facilitation</h3>
+                        <p>Led sprint planning, daily standups, and retrospectives. Maintained backlog, tracked velocity, and improved project delivery efficiency through agile ceremonies.</p>
+                    </div>
+                    <div class="coord-card">
+                        <h3>Stakeholder Communication</h3>
+                        <p>Conducted regular stakeholder meetings presenting analytics insights, demo new features, and gathering feedback for continuous improvement.</p>
+                    </div>
+                    <div class="coord-card">
+                        <h3>Technical Liaison</h3>
+                        <p>Bridged communication between technical and non-technical teams, translating business requirements into technical specifications and explaining technical constraints in business terms.</p>
+                    </div>
+                    <div class="coord-card">
+                        <h3>Mentorship & Training</h3>
+                        <p>Mentored 3+ interns on full-stack development, conducted knowledge-share sessions, and created comprehensive documentation (user manuals, API specs, troubleshooting guides, SOPs).</p>
+                    </div>
+                    <div class="coord-card">
+                        <h3>Production Support</h3>
+                        <p>Provided application support for 1000+ daily operations, handled incident response, and maintained system reliability with monitoring and alerting.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Learnings -->
+            <section class="content-section">
+                <h2>Key Engineering Learnings & Growth</h2>
+                
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <h3>Full-Stack Architecture Thinking</h3>
+                        <p>Learned to design systems holistically—from database schema to API contracts to frontend components. Early architecture decisions compound over time; thoughtful design reduces technical debt.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Security Can't Be Bolted On</h3>
+                        <p>Enterprise security (authentication, authorization, audit logging) must be foundational, not added later. JWT + RBAC + audit trails prevented major rework down the line.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Complex SQL is a Superpower</h3>
+                        <p>Mastering CTEs, window functions, and complex JOINs unlocked powerful analytics that would be impossible with simple queries. Database design directly impacts query performance.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Component Libraries Accelerate Development</h3>
+                        <p>Building 50+ reusable components upfront (even before full requirements) accelerated feature development by 40%. Storybook testing prevented regression bugs.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Documentation is Product Development</h3>
+                        <p>20+ comprehensive guides reduced onboarding from weeks to days. Good documentation scales knowledge and reduces support burden—it's not "extra" work, it's essential work.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Cross-Team Coordination is Critical</h3>
+                        <p>Technical skills alone aren't enough—gathering requirements from 5+ departments, translating business needs to technical specs, and managing stakeholder expectations are equally important.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Future Enhancements -->
+            <section class="content-section">
+                <h2>Ongoing Development & Roadmap</h2>
+                
+                <div class="roadmap-grid">
+                    <div class="roadmap-phase completed">
+                        <div class="phase-badge">Completed</div>
+                        <h3>Phase 1: Foundation</h3>
+                        <ul>
+                            <li>Full-stack architecture (React + Spring Boot)</li>
+                            <li>JWT authentication & RBAC</li>
+                            <li>User management with CRUD operations</li>
+                            <li>Analytics platform with 15+ data sources</li>
+                            <li>Content moderation system</li>
+                            <li>Docker deployment to AWS</li>
+                        </ul>
+                    </div>
+
+                    <div class="roadmap-phase current">
+                        <div class="phase-badge">In Progress</div>
+                        <h3>Phase 2: Advanced Features</h3>
+                        <ul>
+                            <li>Feature toggle system for A/B testing</li>
+                            <li>Advanced analytics with ML insights</li>
+                            <li>Real-time notifications via WebSocket</li>
+                            <li>Automated report generation (PDF/Excel)</li>
+                            <li>Enhanced audit logging dashboard</li>
+                            <li>Mobile-responsive UI improvements</li>
+                        </ul>
+                    </div>
+
+                    <div class="roadmap-phase planned">
+                        <div class="phase-badge">Planned</div>
+                        <h3>Phase 3: Enterprise Scale</h3>
+                        <ul>
+                            <li>Multi-tenant support for white-labeling</li>
+                            <li>Advanced role hierarchy (custom roles)</li>
+                            <li>GraphQL API for flexible queries</li>
+                            <li>Kubernetes orchestration</li>
+                            <li>ElasticSearch for log analytics</li>
+                            <li>Comprehensive test coverage (>80%)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <h2>Confidential Internal Project</h2>
+                <p>This enterprise admin dashboard is an internal management system not available for public access due to security and privacy requirements. The information presented demonstrates technical capabilities and business impact.</p>
+                
+                <div class="cta-grid">
+                    <div class="cta-card">
+                        <h3>Full-Stack Development</h3>
+                        <p>Complete system built from scratch: React/TypeScript frontend, Java Spring Boot backend, PostgreSQL database, AWS deployment</p>
+                    </div>
+                    <div class="cta-card">
+                        <h3>Enterprise Security</h3>
+                        <p>JWT authentication, multi-role RBAC, audit logging, password policies, account lockout, comprehensive security hardening</p>
+                    </div>
+                    <div class="cta-card">
+                        <h3>Business Impact</h3>
+                        <p>300% analytics improvement, 60% time savings, 1000+ users managed, 40% faster development, cross-team leadership</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="project-footer">
+                <p>Built with React 19 | TypeScript | Java Spring Boot 3 | PostgreSQL | Docker | AWS</p>
+                <p>Enterprise Admin Dashboard & Analytics Platform</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

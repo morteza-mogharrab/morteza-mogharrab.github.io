@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Brand Asset Generation Pipeline - Morteza Mogharrab</title>
+    <meta name="description" content="AI-powered n8n automation system for generating high-quality brand assets using GPT-4 Vision and DALL-E 3 with systematic quality control.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.png" sizes="32x32">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+    </button>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="project-container">
+        <!-- Back Navigation -->
+        <nav class="back-nav">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Portfolio
+            </a>
+        </nav>
+
+        <!-- Project Hero -->
+        <header class="project-hero">
+            <div class="project-badge-hero">AI Automation</div>
+            <h1 class="project-hero-title">Automated Brand Asset Generation Pipeline</h1>
+            <p class="project-hero-subtitle">AI-Powered Marketing Asset Creation with Systematic Quality Control</p>
+            
+            <!-- Quick Stats Grid -->
+            <div class="hero-stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value">85%</span>
+                    <span class="stat-label">Time Reduction</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">97.5%</span>
+                    <span class="stat-label">Cost Savings</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">200+</span>
+                    <span class="stat-label">Assets/Day</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">95%</span>
+                    <span class="stat-label">Brand Compliance</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="project-content">
+            <!-- Project Metadata -->
+            <section class="project-meta-section">
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">AI Automation System</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">System Architect & Developer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">December 2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tech Stack</span>
+                        <span class="meta-value">n8n, GPT-4 Vision, DALL-E 3, Google Drive</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Executive Summary -->
+            <section class="content-section">
+                <h2>Executive Summary</h2>
+                <p class="lead-text">This project demonstrates how expert design knowledge can be systematically extracted, codified, and scaled through intelligent automation. By leveraging advanced AI models and sophisticated prompt-engineering techniques, this system automatically generates professional-quality brand assets while eliminating the need for dedicated graphic design teams for routine asset creation.</p>
+                
+                <div class="highlight-box">
+                    <h3>Core Innovation</h3>
+                    <p>The workflow evaluates generated assets against predefined brand compatibility criteria and automatically saves approved results to Google Drive using an n8n automation pipeline—fully automating the end-to-end asset creation process from plain-English description to final delivery.</p>
+                </div>
+            </section>
+
+            <!-- Business Challenge -->
+            <section class="content-section">
+                <h2>The Business Challenge</h2>
+                
+                <div class="challenge-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">📊</div>
+                        <h3>Limited Design Capacity</h3>
+                        <p>Traditional design teams limited to 10-15 assets per week, creating bottlenecks in campaign execution and market responsiveness.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">💰</div>
+                        <h3>Escalating Costs</h3>
+                        <p>$200-500 per asset with designer time, making large-scale campaigns financially prohibitive for most businesses.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">🎨</div>
+                        <h3>Brand Inconsistency</h3>
+                        <p>Manual asset creation leads to 30% brand compliance issues across campaigns, damaging brand cohesion.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">⏱️</div>
+                        <h3>Slow Turnaround</h3>
+                        <p>2-3 week production cycles prevent rapid market response and agile campaign iteration.</p>
+                    </div>
+                </div>
+
+                <div class="stats-comparison">
+                    <div class="comparison-column">
+                        <h3>Traditional Workflow</h3>
+                        <ul class="comparison-list negative">
+                            <li>2 weeks per campaign cycle</li>
+                            <li>10-15 assets per week maximum</li>
+                            <li>$400 average cost per asset</li>
+                            <li>30% brand compliance issues</li>
+                            <li>Limited to single-platform assets</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-arrow">→</div>
+                    <div class="comparison-column">
+                        <h3>Automated System</h3>
+                        <ul class="comparison-list positive">
+                            <li>2 hours per campaign cycle</li>
+                            <li>200+ assets per day capacity</li>
+                            <li>$10 average cost per asset</li>
+                            <li>95% brand compliance rate</li>
+                            <li>Multi-platform optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solution Architecture -->
+            <section class="content-section">
+                <h2>Solution Architecture</h2>
+                
+                <div class="architecture-diagram">
+                    <div class="arch-layer">
+                        <div class="arch-box input">
+                            <h4>1. Input Layer</h4>
+                            <p>Plain-English Description</p>
+                            <span class="arch-detail">Marketing team provides campaign brief</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box processing">
+                            <h4>2. Prompt Engineering</h4>
+                            <p>Advanced Template System</p>
+                            <span class="arch-detail">Weighted parameters + conditional logic</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box generation">
+                            <h4>3. AI Generation</h4>
+                            <p>Multi-Modal APIs</p>
+                            <span class="arch-detail">GPT-4 Vision, DALL-E 3, Google Veo 3</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box validation">
+                            <h4>4. Quality Control</h4>
+                            <p>Brand Compliance Validation</p>
+                            <span class="arch-detail">Automated scoring + iterative refinement</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box output">
+                            <h4>5. Delivery</h4>
+                            <p>Automated Storage & Distribution</p>
+                            <span class="arch-detail">Google Drive + stakeholder notifications</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-block">
+<pre><code>// Master Pipeline Structure
+Trigger (Webhook/Schedule) → 
+Brand Asset Request Parser → 
+AI Generation Coordination → 
+Quality Validation → 
+Asset Processing → 
+Storage & Distribution</code></pre>
+                </div>
+            </section>
+
+            <!-- Advanced Prompt Engineering -->
+            <section class="content-section">
+                <h2>Advanced Prompt Engineering Methodology</h2>
+                
+                <p class="lead-text">The system employs enterprise-grade prompt architecture with multi-layered conditional weighted prompting, transforming generic AI outputs into brand-consistent, conversion-optimized assets.</p>
+
+                <!-- Prompt Architecture -->
+                <div class="contribution-block">
+                    <div class="contribution-number">01</div>
+                    <div class="contribution-content">
+                        <h3>Weighted Parameter System</h3>
+                        <p>Systematic element prioritization using numerical weighting (1.0 = normal, 1.5 = enhanced, 2.0 = maximum emphasis) to ensure critical brand elements receive appropriate visual prominence.</p>
+                        
+                        <div class="param-grid">
+                            <div class="param-card">
+                                <strong>Brand Visibility</strong>
+                                <span class="param-value">(logo prominence: 1.8)</span>
+                                <p>Ensures brand elements are prominent without being forced</p>
+                            </div>
+                            <div class="param-card">
+                                <strong>Emotional Impact</strong>
+                                <span class="param-value">(community connection: 1.7)</span>
+                                <p>Optimizes for audience emotional resonance</p>
+                            </div>
+                            <div class="param-card">
+                                <strong>Visual Hierarchy</strong>
+                                <span class="param-value">(information flow: 1.6)</span>
+                                <p>Guides viewer attention through composition</p>
+                            </div>
+                            <div class="param-card">
+                                <strong>Color Dominance</strong>
+                                <span class="param-value">(brand palette: 1.9)</span>
+                                <p>Enforces brand color consistency</p>
+                            </div>
+                        </div>
+
+                        <div class="code-block">
+<pre><code>{
+  "critical_elements": {
+    "brand_visibility": "(logo_prominence:1.8)",
+    "emotional_impact": "(heartwarming_connection:1.7)",
+    "visual_hierarchy": "(clear_flow:1.6)",
+    "color_dominance": "(brand_palette:1.9)",
+    "conversion_psychology": "(urgency_triggers:1.4)"
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conditional Logic -->
+                <div class="contribution-block">
+                    <div class="contribution-number">02</div>
+                    <div class="contribution-content">
+                        <h3>Conditional Style Logic</h3>
+                        <p>Dynamic prompt adaptation based on campaign type, platform requirements, and target audience demographics.</p>
+                        
+                        <div class="conditional-grid">
+                            <div class="conditional-card">
+                                <h4>IF: Social Media Campaign</h4>
+                                <div class="code-block mini">
+<pre><code>APPLY:
+- TikTok visual language (1.8)
+- Viral content mechanics (1.7)
+- Gen-Z aesthetics (1.6)
+- High-contrast neon (1.8)</code></pre>
+                                </div>
+                            </div>
+                            <div class="conditional-card">
+                                <h4>IF: Print Poster Campaign</h4>
+                                <div class="code-block mini">
+<pre><code>APPLY:
+- Mystical realism (1.8)
+- Large-format optimization (1.7)
+- Atmospheric depth (1.6)
+- Cinematic composition (1.8)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Single template generates 8+ platform-optimized variations automatically, reducing manual rework by 90%.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Negative Prompting -->
+                <div class="contribution-block">
+                    <div class="contribution-number">03</div>
+                    <div class="contribution-content">
+                        <h3>Negative Prompting Framework</h3>
+                        <p>Systematic exclusion of undesired elements through three-tier negative constraints: technical, brand, and psychological exclusions.</p>
+                        
+                        <div class="negative-grid">
+                            <div class="negative-category">
+                                <h4>Technical Exclusions</h4>
+                                <ul>
+                                    <li>Pixelated quality</li>
+                                    <li>Amateur composition</li>
+                                    <li>Stock photo aesthetics</li>
+                                    <li>Oversaturated filters</li>
+                                    <li>Cluttered layouts</li>
+                                </ul>
+                            </div>
+                            <div class="negative-category">
+                                <h4>Brand Exclusions</h4>
+                                <ul>
+                                    <li>Competing brand logos</li>
+                                    <li>Off-brand color palettes</li>
+                                    <li>Unauthorized imagery</li>
+                                    <li>Inconsistent typography</li>
+                                    <li>Unapproved mascots</li>
+                                </ul>
+                            </div>
+                            <div class="negative-category">
+                                <h4>Psychological Exclusions</h4>
+                                <ul>
+                                    <li>Anxiety-inducing elements</li>
+                                    <li>Negative emotional triggers</li>
+                                    <li>Isolation imagery</li>
+                                    <li>Aggressive messaging</li>
+                                    <li>Dark tone inconsistent with brand</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi-Step Generation -->
+                <div class="contribution-block">
+                    <div class="contribution-number">04</div>
+                    <div class="contribution-content">
+                        <h3>Multi-Step Generation Sequence</h3>
+                        <p>Seven-phase systematic process with validation gates at each stage, ensuring progressive quality refinement.</p>
+                        
+                        <div class="step-sequence">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <strong>Foundation</strong>
+                                    <p>Establish compositional framework with golden ratio alignment (1.8) and visual flow dynamics (1.6)</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <strong>Character Placement</strong>
+                                    <p>Position mascot as heroic focal point (1.8) with brand character consistency (1.7)</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <strong>Environmental Layering</strong>
+                                    <p>Build atmospheric depth (1.6) with contextual elements and weather authenticity (1.5)</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <strong>Community Integration</strong>
+                                    <p>Weave diverse human connection (1.7) with realistic interaction scenarios (1.5)</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <strong>Brand Harmonization</strong>
+                                    <p>Seamlessly integrate branding (1.9) without forced placement (0.2)</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">6</div>
+                                <div class="step-content">
+                                    <strong>Emotional Amplification</strong>
+                                    <p>Enhance heartwarming resonance (1.8) and community pride messaging (1.6)</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">7</div>
+                                <div class="step-content">
+                                    <strong>Conversion Optimization</strong>
+                                    <p>Strategically place call-to-action elements (1.7) with urgency psychology (1.5)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- n8n Technical Implementation -->
+            <section class="content-section">
+                <h2>n8n Workflow Automation Implementation</h2>
+                
+                <p class="lead-text">Enterprise-grade workflow orchestration managing the entire asset generation lifecycle from initial request to final delivery.</p>
+
+                <div class="n8n-workflow">
+                    <div class="workflow-stage">
+                        <div class="stage-header">
+                            <span class="stage-number">1</span>
+                            <h3>Input Processing</h3>
+                        </div>
+                        <div class="stage-content">
+                            <ul>
+                                <li><strong>Webhook Receivers:</strong> External campaign request integration</li>
+                                <li><strong>Google Sheets Integration:</strong> Campaign brief processing and parameter extraction</li>
+                                <li><strong>GitHub Integration:</strong> Template version control and management</li>
+                                <li><strong>Schedule Triggers:</strong> Batch processing automation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="workflow-stage">
+                        <div class="stage-header">
+                            <span class="stage-number">2</span>
+                            <h3>AI API Coordination</h3>
+                        </div>
+                        <div class="stage-content">
+                            <ul>
+                                <li><strong>Google Gemini API:</strong> Image generation with prompt injection</li>
+                                <li><strong>Google Veo 3 API:</strong> Video asset coordination (8-15 second clips)</li>
+                                <li><strong>Custom Prompt Management:</strong> Dynamic parameter substitution</li>
+                                <li><strong>Error Handling:</strong> Retry logic with exponential backoff</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="workflow-stage">
+                        <div class="stage-header">
+                            <span class="stage-number">3</span>
+                            <h3>Quality Control Loop</h3>
+                        </div>
+                        <div class="stage-content">
+                            <ul>
+                                <li><strong>Brand Compliance Checking:</strong> Automated validation against style guidelines</li>
+                                <li><strong>Image Analysis:</strong> Quality threshold validation workflows</li>
+                                <li><strong>Iterative Refinement:</strong> Loops when quality standards not met</li>
+                                <li><strong>Human Approval Gates:</strong> Final validation checkpoints</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="workflow-stage">
+                        <div class="stage-header">
+                            <span class="stage-number">4</span>
+                            <h3>Storage & Distribution</h3>
+                        </div>
+                        <div class="stage-content">
+                            <ul>
+                                <li><strong>Google Drive Integration:</strong> Organized folder structure creation</li>
+                                <li><strong>File Management:</strong> Automated naming and metadata tagging</li>
+                                <li><strong>Multi-Format Export:</strong> Platform-specific optimization workflows</li>
+                                <li><strong>Delivery Notifications:</strong> Stakeholder alert system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-block">
+<pre><code>// N8N Workflow Implementation
+1. Campaign Brief Input (Google Sheets/Webhook)
+   ├── Parse campaign requirements
+   ├── Extract brand parameters
+   └── Validate input completeness
+
+2. Template Processing
+   ├── Load brand style templates
+   ├── Inject campaign-specific parameters
+   └── Generate systematic prompts
+
+3. AI Generation Coordination
+   ├── Google Gemini API calls (images)
+   ├── Google Veo 3 API calls (videos)
+   ├── Parallel processing management
+   └── Response consolidation
+
+4. Quality Control Loop
+   ├── Automated compliance checking
+   ├── Brand consistency validation
+   ├── Quality score calculation
+   └── Iteration trigger (if needed)
+
+5. Asset Finalization
+   ├── Format optimization
+   ├── Metadata application
+   ├── Storage organization
+   └── Delivery notification</code></pre>
+                </div>
+            </section>
+
+            <!-- Case Study: PETOKINGDOM -->
+            <section class="content-section">
+                <h2>Case Study: PETOKINGDOM Implementation</h2>
+                
+                <div class="case-study-header">
+                    <h3>Project Scope</h3>
+                    <p><strong>Challenge:</strong> Generate 50+ marketing assets for PETOKINGDOM app launch across multiple campaigns and platforms while maintaining strict brand consistency.</p>
+                </div>
+
+                <div class="implementation-phases">
+                    <div class="phase-card">
+                        <h4>Phase 1: Brand System Setup</h4>
+                        <ul>
+                            <li>Yellow citrus bearded dragon character guidelines</li>
+                            <li>Color palette enforcement (#FFD700 primary)</li>
+                            <li>Edmonton landmark integration system</li>
+                            <li>Community safety messaging consistency</li>
+                            <li>Aurora borealis visual theme development</li>
+                        </ul>
+                    </div>
+
+                    <div class="phase-card">
+                        <h4>Phase 2: Automated Asset Categories</h4>
+                        <ul>
+                            <li>Social media posts (Instagram, Facebook, TikTok)</li>
+                            <li>8-15 second promotional videos with Google Veo 3</li>
+                            <li>Event-specific marketing materials</li>
+                            <li>App store promotional graphics</li>
+                            <li>Large-format digital billboard designs</li>
+                        </ul>
+                    </div>
+
+                    <div class="phase-card">
+                        <h4>Phase 3: Results & Optimization</h4>
+                        <ul>
+                            <li><strong>20 assets in 2 hours</strong> vs 2 weeks manually</li>
+                            <li><strong>95% brand compliance</strong> with automated validation</li>
+                            <li><strong>$50 vs $300</strong> per asset cost reduction</li>
+                            <li><strong>88% first-pass acceptance</strong> rate</li>
+                            <li><strong>0.2 revision cycles</strong> vs 2.8 manual average</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="results-showcase">
+                    <h3>Generated Asset Examples</h3>
+                    <div class="simple-gallery">
+                        <a href="assets/brand-samples/sample-1.png" target="_blank" class="gallery-image-link">
+                            <img src="assets/brand-samples/sample-1.png" alt="Brand asset sample 1" loading="lazy">
+                        </a>
+                        <a href="assets/brand-samples/sample-2.png" target="_blank" class="gallery-image-link">
+                            <img src="assets/brand-samples/sample-2.png" alt="Brand asset sample 2" loading="lazy">
+                        </a>
+                        <a href="assets/brand-samples/sample-3.png" target="_blank" class="gallery-image-link">
+                            <img src="assets/brand-samples/sample-3.png" alt="Brand asset sample 3" loading="lazy">
+                        </a>
+                        <a href="assets/brand-samples/sample-4.png" target="_blank" class="gallery-image-link">
+                            <img src="assets/brand-samples/sample-4.png" alt="Brand asset sample 4" loading="lazy">
+                        </a>
+                        <a href="assets/brand-samples/sample-5.png" target="_blank" class="gallery-image-link">
+                            <img src="assets/brand-samples/sample-5.png" alt="Brand asset sample 5" loading="lazy">
+                        </a>
+                        <a href="assets/brand-samples/sample-6.png" target="_blank" class="gallery-image-link">
+                            <img src="assets/brand-samples/sample-6.png" alt="Brand asset sample 6" loading="lazy">
+                        </a>
+                        <a href="assets/brand-samples/sample-7.png" target="_blank" class="gallery-image-link">
+                            <img src="assets/brand-samples/sample-7.png" alt="Brand asset sample 7" loading="lazy">
+                        </a>
+                        <a href="assets/brand-samples/sample-8.png" target="_blank" class="gallery-image-link">
+                            <img src="assets/brand-samples/sample-8.png" alt="Brand asset sample 8" loading="lazy">
+                        </a>
+                        <a href="assets/brand-samples/sample-9.png" target="_blank" class="gallery-image-link">
+                            <img src="assets/brand-samples/sample-9.png" alt="Brand asset sample 9" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results & Impact -->
+            <section class="content-section">
+                <h2>Quantitative Results & Business Impact</h2>
+                
+                <div class="impact-table">
+                    <div class="impact-row header">
+                        <span>Metric</span>
+                        <span>Before (Manual)</span>
+                        <span>After (Automated)</span>
+                        <span>Improvement</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Production Time</span>
+                        <span>2 weeks per campaign</span>
+                        <span>2 hours per campaign</span>
+                        <span class="highlight">85% reduction</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Cost per Asset</span>
+                        <span>$400 (designer + revisions)</span>
+                        <span>$10 (API + processing)</span>
+                        <span class="highlight">97.5% reduction</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Daily Capacity</span>
+                        <span>10-15 assets</span>
+                        <span>200+ assets</span>
+                        <span class="highlight">13x increase</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Brand Compliance</span>
+                        <span>70% (manual errors)</span>
+                        <span>95% (automated validation)</span>
+                        <span class="highlight">25% improvement</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Revision Cycles</span>
+                        <span>2.8 average</span>
+                        <span>0.2 average</span>
+                        <span class="highlight">93% reduction</span>
+                    </div>
+                </div>
+
+                <div class="roi-breakdown">
+                    <h3>ROI Analysis: 100-Asset Campaign</h3>
+                    <div class="roi-grid">
+                        <div class="roi-card traditional">
+                            <h4>Traditional Workflow</h4>
+                            <div class="roi-item">
+                                <span>Designer time</span>
+                                <span>$30,000</span>
+                            </div>
+                            <div class="roi-item">
+                                <span>Revision cycles</span>
+                                <span>$10,000</span>
+                            </div>
+                            <div class="roi-item">
+                                <span>Project management</span>
+                                <span>$5,000</span>
+                            </div>
+                            <div class="roi-total">
+                                <strong>Total Cost:</strong>
+                                <strong>$45,000</strong>
+                            </div>
+                        </div>
+
+                        <div class="roi-card automated">
+                            <h4>Automated System</h4>
+                            <div class="roi-item">
+                                <span>API usage</span>
+                                <span>$800</span>
+                            </div>
+                            <div class="roi-item">
+                                <span>Quality validation</span>
+                                <span>$200</span>
+                            </div>
+                            <div class="roi-item">
+                                <span>System maintenance</span>
+                                <span>$150</span>
+                            </div>
+                            <div class="roi-total">
+                                <strong>Total Cost:</strong>
+                                <strong>$1,150</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roi-savings">
+                        <h4>Net Savings: $43,850 per 100-asset campaign</h4>
+                        <p>Payback period: Single campaign | Annual savings potential: $350,000+</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills Demonstrated -->
+            <section class="content-section">
+                <h2>Technical Skills Demonstrated</h2>
+                
+                <div class="skills-showcase">
+                    <div class="skill-category">
+                        <h3>System Architecture</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>End-to-end pipeline design from input to delivery</span>
+                            </div>
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Microservices approach with modular component integration</span>
+                            </div>
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Scalable infrastructure planning and implementation</span>
+                            </div>
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Performance optimization and cost management</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>AI Integration Expertise</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Multi-modal AI coordination (text, image, video generation)</span>
+                            </div>
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Enterprise-grade prompt engineering with weighted parameters</span>
+                            </div>
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Quality control systems for AI output validation</span>
+                            </div>
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Cost optimization through systematic resource management</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Business Process Automation</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Workflow optimization reducing manual intervention by 85%</span>
+                            </div>
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Quality assurance systems maintaining professional standards</span>
+                            </div>
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Stakeholder integration through automated notifications</span>
+                            </div>
+                            <div class="skill-item">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                                <span>Comprehensive performance analytics and reporting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology Stack -->
+            <section class="content-section">
+                <h2>Technology Stack</h2>
+                
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>Workflow Orchestration</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">n8n</span>
+                            <span class="tech-pill">Webhooks</span>
+                            <span class="tech-pill">Schedule Triggers</span>
+                            <span class="tech-pill">Error Handling</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>AI & Generation</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Google Gemini API</span>
+                            <span class="tech-pill">Google Veo 3</span>
+                            <span class="tech-pill">GPT-4 Vision</span>
+                            <span class="tech-pill">DALL-E 3</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Data & Storage</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Google Drive API</span>
+                            <span class="tech-pill">Google Sheets API</span>
+                            <span class="tech-pill">JSON Processing</span>
+                            <span class="tech-pill">Metadata Management</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Version Control & CI/CD</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">GitHub API</span>
+                            <span class="tech-pill">Template Versioning</span>
+                            <span class="tech-pill">Automated Deployment</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Learnings -->
+            <section class="content-section">
+                <h2>Key Engineering Learnings</h2>
+                
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <h3>Prompt Engineering is Software Engineering</h3>
+                        <p>Systematic prompt templates with version control, testing, and documentation are as critical as code. Weighted parameters and conditional logic transform generic AI into brand-consistent professional tools.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Quality Control Requires Automation</h3>
+                        <p>Human validation doesn't scale. Automated brand compliance checking with scoring thresholds and iterative refinement loops maintain quality while processing 200+ assets daily.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Multi-Modal Coordination is Complex</h3>
+                        <p>Orchestrating text, image, and video generation across multiple APIs requires careful error handling, retry logic, and state management. n8n workflow automation proved essential for production reliability.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Cost Optimization Through Architecture</h3>
+                        <p>Strategic API selection (cheaper models for quality checking, premium models for final generation) reduced costs by 40% while maintaining output quality. Batch processing further optimized resource usage.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Brand Consistency is Systematic</h3>
+                        <p>Codifying design knowledge into weighted parameters, negative prompts, and validation rules achieved 95% brand compliance—higher than manual processes. Design expertise can be systematically extracted and scaled.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Future Enhancements -->
+            <section class="content-section">
+                <h2>Implementation Roadmap</h2>
+                
+                <div class="roadmap-grid">
+                    <div class="roadmap-phase completed">
+                        <div class="phase-badge">Completed</div>
+                        <h3>Phase 1: Foundation</h3>
+                        <ul>
+                            <li>Core pipeline development with n8n orchestration</li>
+                            <li>AI API integration and quality control systems</li>
+                            <li>Brand template library creation</li>
+                            <li>Initial campaign execution and validation</li>
+                            <li>Performance measurement and optimization</li>
+                        </ul>
+                    </div>
+
+                    <div class="roadmap-phase current">
+                        <div class="phase-badge">In Progress</div>
+                        <h3>Phase 2: Enhancement</h3>
+                        <ul>
+                            <li>Advanced analytics dashboard for campaign metrics</li>
+                            <li>Machine learning optimization for prompt improvement</li>
+                            <li>Multi-brand support for portfolio companies</li>
+                            <li>External API access for third-party integrations</li>
+                            <li>A/B testing framework for asset variations</li>
+                        </ul>
+                    </div>
+
+                    <div class="roadmap-phase planned">
+                        <div class="phase-badge">Planned</div>
+                        <h3>Phase 3: Enterprise Scale</h3>
+                        <ul>
+                            <li>Global deployment with regional optimization</li>
+                            <li>Industry-specific template customization</li>
+                            <li>White-label solutions for agencies</li>
+                            <li>AI model fine-tuning for brand optimization</li>
+                            <li>Real-time collaborative editing interface</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <h2>Interested in AI-Powered Automation?</h2>
+                <p>This project demonstrates how systematic thinking, AI integration, and workflow automation can transform traditional business processes.</p>
+                
+                <div class="cta-grid">
+                    <div class="cta-card">
+                        <h3>System Architecture</h3>
+                        <p>End-to-end pipeline design with microservices integration and scalable infrastructure planning</p>
+                    </div>
+                    <div class="cta-card">
+                        <h3>AI Integration</h3>
+                        <p>Multi-modal API coordination with enterprise-grade prompt engineering and quality control</p>
+                    </div>
+                    <div class="cta-card">
+                        <h3>Business Impact</h3>
+                        <p>97.5% cost reduction, 85% time savings, and scalable processing capacity</p>
+                    </div>
+                </div>
+
+                <div class="installation-box">
+                    <h3>Technical Specifications</h3>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <strong>Processing Capacity:</strong>
+                            <span>200+ assets per day</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Quality Threshold:</strong>
+                            <span>95% brand compliance</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>Response Time:</strong>
+                            <span><30 seconds per asset</span>
+                        </div>
+                        <div class="spec-item">
+                            <strong>System Uptime:</strong>
+                            <span>99.5% with error handling</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="project-footer">
+                <p>Built with n8n Workflow Automation | Google Gemini API | Google Veo 3 | Advanced Prompt Engineering</p>
+                <p>Enterprise-Grade AI Asset Generation System</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

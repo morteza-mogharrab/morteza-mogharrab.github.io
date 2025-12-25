@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piko Social Media App - Morteza Mogharrab</title>
+    <meta name="description" content="Cross-platform pet-focused social media application built with React Native and Expo. Features real-time messaging, GraphQL subscriptions, and multilingual support.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.png" sizes="32x32">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="sun-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+    </button>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="project-container">
+        <!-- Back Navigation -->
+        <nav class="back-nav">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Portfolio
+            </a>
+        </nav>
+
+        <!-- Project Hero -->
+        <header class="project-hero">
+            <div class="project-badge-hero">Cross-Platform Mobile Development</div>
+            <h1 class="project-hero-title">Piko Pet Social Media Platform</h1>
+            <p class="project-hero-subtitle">Production-Grade Cross-Platform Social App for iOS, Android & Web</p>
+            
+            <!-- Quick Stats Grid -->
+            <div class="hero-stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value">50+</span>
+                    <span class="stat-label">Reusable Components</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">Platforms (iOS/Android/Web)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">40+</span>
+                    <span class="stat-label">Bug Fixes</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label">Languages (EN/ZH)</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="project-content">
+            <!-- Project Metadata -->
+            <section class="project-meta-section">
+            <figure class="project-image">
+                <img src="assets/piko-preview.JPG" alt="Piko Social Media platform" tabindex="0" />
+            </figure>  
+            </section>   
+            <section class="project-meta-section">
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">Cross-Platform Mobile App</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Frontend Developer</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">May 2024 - Aug 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Status</span>
+                        <span class="meta-value">Production Ready</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Overview -->
+            <section class="content-section">
+                <h2>Project Overview</h2>
+                <p class="lead-text">Built a production-ready, cross-platform social media application for pet owners from the ground up. The platform enables pet parents to share moments, connect with other pet families, discover local events, and build a community—all while maintaining consistent user experience across iOS, Android, and web platforms.</p>
+                
+                <div class="highlight-box">
+                    <h3>Greenfield Development from Inception</h3>
+                    <p>Joined the project at inception, contributing to critical architecture decisions and establishing best practices that enabled rapid, scalable development. Built 50+ reusable React Native components, implemented real-time features with GraphQL subscriptions, and resolved 40+ cross-platform compatibility issues to deliver a polished, production-ready application.</p>
+                </div>
+            </section>
+
+            <!-- The Challenge -->
+            <section class="content-section">
+                <h2>The Challenge & Technical Complexity</h2>
+                
+                <div class="challenge-intro">
+                    <p><strong>Problem:</strong> PetoLab needed a comprehensive social media platform for pet owners built from scratch. The challenge was creating a scalable, cross-platform application capable of handling real-time social interactions, media-heavy content, and providing seamless experience across iOS, Android, and web.</p>
+                    
+                    <p><strong>Technical Requirements:</strong> Build a production-ready social platform with real-time messaging, content feeds, user authentication, media uploads, and social features. The architecture needed to support future scaling to thousands of concurrent users while maintaining smooth performance.</p>
+                </div>
+                
+                <div class="challenge-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">📱</div>
+                        <h3>Cross-Platform Consistency</h3>
+                        <p>Ensure identical user experience and visual consistency across iOS, Android, and web with shared codebase</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">⚡</div>
+                        <h3>Real-Time Features</h3>
+                        <p>Implement GraphQL subscriptions for instant messaging, live notifications, and content feed updates</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">🎨</div>
+                        <h3>Media Performance</h3>
+                        <p>Handle video/image uploads, compression, thumbnail generation, and playback optimization</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="challenge-icon">🌐</div>
+                        <h3>Internationalization</h3>
+                        <p>Support multiple languages (English/Chinese) with RTL compatibility and locale-aware formatting</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Architecture -->
+            <section class="content-section">
+                <h2>System Architecture</h2>
+                
+                <div class="architecture-diagram">
+                    <div class="arch-layer">
+                        <div class="arch-box input">
+                            <h4>1. Presentation Layer</h4>
+                            <p>React Native + Expo</p>
+                            <span class="arch-detail">50+ components, responsive layouts, platform adapters</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box processing">
+                            <h4>2. State Management</h4>
+                            <p>Redux Toolkit</p>
+                            <span class="arch-detail">Centralized state, async thunks, slice patterns</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box generation">
+                            <h4>3. Data Layer</h4>
+                            <p>GraphQL + REST</p>
+                            <span class="arch-detail">Queries, mutations, subscriptions, media uploads</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box validation">
+                            <h4>4. Platform Services</h4>
+                            <p>Expo Modules</p>
+                            <span class="arch-detail">Camera, location, push notifications, Firebase auth</span>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↓</div>
+                    <div class="arch-layer">
+                        <div class="arch-box output">
+                            <h4>5. Native Platforms</h4>
+                            <p>iOS / Android / Web</p>
+                            <span class="arch-detail">Platform-specific optimizations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-block-wrapper">
+                    <div class="code-block">
+<pre><code>// Cross-Platform Architecture
+Presentation (React Native/Web) → 
+State Management (Redux Toolkit) → 
+API Layer (GraphQL/REST) → 
+Platform Services (Expo Modules) → 
+Native Platforms (iOS/Android/Web)</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Contributions -->
+            <section class="content-section">
+                <h2>Key Technical Contributions</h2>
+
+                <!-- Contribution 1: Component Library -->
+                <div class="contribution-block">
+                    <div class="contribution-number">01</div>
+                    <div class="contribution-content">
+                        <h3>Comprehensive Component Library (50+ Components)</h3>
+                        <p><strong>Challenge:</strong> Build reusable, cross-platform UI components ensuring consistent design language and user experience across iOS, Android, and web.</p>
+                        
+                        <p><strong>Solution:</strong> Architected component library with platform adapters, theming system, and responsive layouts:</p>
+                        
+                        <div class="component-categories">
+                            <div class="component-category">
+                                <h4>Core Components</h4>
+                                <ul>
+                                    <li>Avatar, Badge, Button, Icon, Image</li>
+                                    <li>Text, Chip, Divider, Modal, BottomSheet</li>
+                                    <li>LoadingIndicator, Carousel, Overlay</li>
+                                </ul>
+                            </div>
+                            <div class="component-category">
+                                <h4>Input Components</h4>
+                                <ul>
+                                    <li>TextInput, PasswordInput, SearchInput</li>
+                                    <li>DatePicker, TimePicker, PickerInput</li>
+                                    <li>ImageInput, VideoEditor, CameraModule</li>
+                                    <li>LocationPicker, QRCodeScanner</li>
+                                </ul>
+                            </div>
+                            <div class="component-category">
+                                <h4>Social Components</h4>
+                                <ul>
+                                    <li>PostItem, CommentItem, MessageListItem</li>
+                                    <li>UserProfileCard, PetProfileCard</li>
+                                    <li>ActivityFeed, NotificationCard</li>
+                                    <li>ChatMessage, GroupAvatar</li>
+                                </ul>
+                            </div>
+                            <div class="component-category">
+                                <h4>Layout Components</h4>
+                                <ul>
+                                    <li>ScreenLayout, PagerScreen, StackScreen</li>
+                                    <li>ScrollList, VirtualizedList</li>
+                                    <li>Header, TabBar, NavigationDrawer</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="code-block-wrapper">
+                            <div class="code-block">
+<pre><code>// Platform-Specific Component Adapter
+// Image.tsx (Web)
+import React from 'react';
+
+export const Image = ({ source, style, ...props }) => (
+
+);
+
+// Image.native.tsx (iOS/Android)
+import FastImage from '@d11/react-native-fast-image';
+
+export const Image = ({ source, style, ...props }) => (
+  <FastImage
+    source={source}
+    style={style}
+    {...props}
+  />
+);</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="performance-metrics">
+                            <div class="perf-metric">
+                                <span class="perf-number">50+</span>
+                                <span class="perf-label">Reusable components</span>
+                            </div>
+                            <div class="perf-metric">
+                                <span class="perf-number">40%</span>
+                                <span class="perf-label">Dev acceleration</span>
+                            </div>
+                            <div class="perf-metric">
+                                <span class="perf-number">3</span>
+                                <span class="perf-label">Platforms supported</span>
+                            </div>
+                        </div>
+
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Accelerated feature development by 40% through comprehensive component library. Maintained visual consistency across platforms while enabling rapid iteration on new features.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 2: Real-Time Features -->
+                <div class="contribution-block">
+                    <div class="contribution-number">02</div>
+                    <div class="contribution-content">
+                        <h3>Real-Time Social Features with GraphQL Subscriptions</h3>
+                        <p><strong>Challenge:</strong> Implement instant messaging, live notifications, and real-time content feed updates for responsive social experience.</p>
+                        
+                        <p><strong>Solution:</strong> Integrated GraphQL subscriptions with WebSocket connections for bidirectional real-time communication:</p>
+                        
+                        <div class="realtime-features">
+                            <div class="realtime-card">
+                                <h4>Instant Messaging</h4>
+                                <ul>
+                                    <li>Direct chat with real-time message delivery</li>
+                                    <li>Group chat with typing indicators</li>
+                                    <li>Read receipts and message status</li>
+                                    <li>Media attachments (images, videos)</li>
+                                </ul>
+                            </div>
+                            <div class="realtime-card">
+                                <h4>Live Notifications</h4>
+                                <ul>
+                                    <li>Push notifications via Firebase Cloud Messaging</li>
+                                    <li>In-app notification center</li>
+                                    <li>Activity feed with live updates</li>
+                                    <li>Friend requests and invitations</li>
+                                </ul>
+                            </div>
+                            <div class="realtime-card">
+                                <h4>Content Feed Updates</h4>
+                                <ul>
+                                    <li>New post notifications</li>
+                                    <li>Comment and like counters</li>
+                                    <li>Event RSVP updates</li>
+                                    <li>Optimistic UI updates</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="code-block-wrapper">
+                            <div class="code-block">
+<pre><code>// GraphQL Subscription for Real-Time Messages
+import { useSubscription } from '@apollo/client';
+import { graphql } from './graphql';
+
+const NEW_MESSAGE_SUBSCRIPTION = graphql(`
+  subscription OnNewMessage($chatId: ID!) {
+    messageAdded(chatId: $chatId) {
+      id
+      content
+      sender {
+        id
+        name
+        avatar
+      }
+      createdAt
+    }
+  }
+`);
+
+export const useChatSubscription = (chatId: string) => {
+  const { data, loading } = useSubscription(
+    NEW_MESSAGE_SUBSCRIPTION,
+    {
+      variables: { chatId },
+      onData: ({ data }) => {
+        // Update local cache with new message
+        updateChatMessages(data.messageAdded);
+      },
+    }
+  );
+  
+  return { newMessage: data?.messageAdded, loading };
+};</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Created responsive, real-time social experience with instant message delivery, live notifications, and dynamic content updates—matching expectations set by major social platforms.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 3: State Management -->
+                <div class="contribution-block">
+                    <div class="contribution-number">03</div>
+                    <div class="contribution-content">
+                        <h3>Redux Architecture for Complex State Management</h3>
+                        <p><strong>Challenge:</strong> Manage complex application state including user sessions, content feeds, chat history, and real-time updates across multiple screens.</p>
+                        
+                        <p><strong>Solution:</strong> Designed Redux architecture with feature-based slices, async thunks, and selectors:</p>
+                        
+                        <div class="redux-structure">
+                            <div class="redux-slice">
+                                <h4>State Slices</h4>
+                                <ul>
+                                    <li><code>authSlice</code> - User authentication & sessions</li>
+                                    <li><code>postSlice</code> - Content feed & post management</li>
+                                    <li><code>chatSlice</code> - Messaging & conversations</li>
+                                    <li><code>petProfileSlice</code> - Pet profiles & relationships</li>
+                                    <li><code>eventSlice</code> - Events & attendance</li>
+                                    <li><code>messageSlice</code> - Notifications & activities</li>
+                                </ul>
+                            </div>
+                            <div class="redux-slice">
+                                <h4>Architecture Patterns</h4>
+                                <ul>
+                                    <li>Feature-based slice organization</li>
+                                    <li>Memoized selectors with Reselect</li>
+                                    <li>Async thunks for API integration</li>
+                                    <li>Normalized state for relational data</li>
+                                    <li>Persistent storage with AsyncStorage</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="code-block-wrapper">
+                            <div class="code-block">
+<pre><code>// Redux Slice with Async Thunks
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { postConnector } from '@/connectors/postConnector';
+
+export const fetchPostFeed = createAsyncThunk(
+  'post/fetchFeed',
+  async ({ cursor, limit }: FeedParams) => {
+    const response = await postConnector.getPostFeed(cursor, limit);
+    return response;
+  }
+);
+
+const postSlice = createSlice({
+  name: 'post',
+  initialState: {
+    feed: [],
+    loading: false,
+    error: null,
+    hasMore: true,
+  },
+  reducers: {
+    optimisticLikePost: (state, action) => {
+      const post = state.feed.find(p => p.id === action.payload);
+      if (post) post.isLiked = !post.isLiked;
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchPostFeed.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchPostFeed.fulfilled, (state, action) => {
+        state.feed = [...state.feed, ...action.payload.posts];
+        state.hasMore = action.payload.hasMore;
+        state.loading = false;
+      });
+  },
+});</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Established scalable state management foundation enabling complex feature implementation with predictable data flow, optimistic updates, and efficient re-renders.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 4: Internationalization -->
+                <div class="contribution-block">
+                    <div class="contribution-number">04</div>
+                    <div class="contribution-content">
+                        <h3>Multilingual Support with LinguiJS</h3>
+                        <p><strong>Challenge:</strong> Support English and Chinese languages with proper locale formatting, pluralization rules, and dynamic language switching.</p>
+                        
+                        <p><strong>Solution:</strong> Implemented comprehensive i18n system using LinguiJS with message extraction, compilation, and runtime switching:</p>
+                        
+                        <div class="i18n-features">
+                            <div class="i18n-feature">
+                                <strong>Message Management</strong>
+                                <p>Automated extraction from source code, PO file management, compiled message catalogs for performance</p>
+                            </div>
+                            <div class="i18n-feature">
+                                <strong>Locale Features</strong>
+                                <p>Pluralization rules, number/date formatting, currency handling, time zone awareness</p>
+                            </div>
+                            <div class="i18n-feature">
+                                <strong>Developer Experience</strong>
+                                <p>TypeScript integration, IDE autocomplete, compile-time validation, hot reload support</p>
+                            </div>
+                        </div>
+
+                        <div class="code-block-wrapper">
+                            <div class="code-block">
+<pre><code>// LinguiJS Implementation
+import { Trans, t } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
+
+export const WelcomeScreen = () => {
+  const { i18n } = useLingui();
+  
+  return (
+    <View>
+      <Text>
+        <Trans>Welcome to PetoKingdom!</Trans>
+      </Text>
+      <Text>
+        {i18n._(t`You have ${count} new notifications`)}
+      </Text>
+      <Button 
+        title={i18n._(t`Get Started`)} 
+        onPress={handleStart}
+      />
+    </View>
+  );
+};
+
+// Extracted messages (messages.po)
+// msgid "Welcome to PetoKingdom!"
+// msgstr "欢迎来到宠物王国！"
+</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="performance-metrics">
+                            <div class="perf-metric">
+                                <span class="perf-number">2</span>
+                                <span class="perf-label">Languages</span>
+                            </div>
+                            <div class="perf-metric">
+                                <span class="perf-number">1000+</span>
+                                <span class="perf-label">Translated strings</span>
+                            </div>
+                            <div class="perf-metric">
+                                <span class="perf-number">Instant</span>
+                                <span class="perf-label">Language switching</span>
+                            </div>
+                        </div>
+
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Expanded potential user base by supporting Chinese language market. Established scalable i18n foundation for adding additional languages in future.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 5: Cross-Platform Bug Resolution -->
+                <div class="contribution-block">
+                    <div class="contribution-number">05</div>
+                    <div class="contribution-content">
+                        <h3>Cross-Platform Compatibility & Bug Resolution (40+ Issues)</h3>
+                        <p><strong>Challenge:</strong> Resolve platform-specific bugs including styling inconsistencies, responsive design issues, and native module incompatibilities.</p>
+                        
+                        <p><strong>Solution:</strong> Systematic debugging approach with platform-specific testing and fixes:</p>
+                        
+                        <div class="bug-categories">
+                            <div class="bug-category">
+                                <h4>Styling Inconsistencies</h4>
+                                <ul>
+                                    <li>Flexbox behavior differences across platforms</li>
+                                    <li>Font rendering and typography issues</li>
+                                    <li>Shadow and elevation inconsistencies</li>
+                                    <li>Border radius and clipping problems</li>
+                                </ul>
+                            </div>
+                            <div class="bug-category">
+                                <h4>Responsive Design</h4>
+                                <ul>
+                                    <li>Screen size adaptation (tablets/phones)</li>
+                                    <li>Keyboard handling and avoidance</li>
+                                    <li>Safe area insets (notches, home indicators)</li>
+                                    <li>Orientation changes and layout shifts</li>
+                                </ul>
+                            </div>
+                            <div class="bug-category">
+                                <h4>Native Module Issues</h4>
+                                <ul>
+                                    <li>Camera permissions and functionality</li>
+                                    <li>Video playback performance</li>
+                                    <li>File system access differences</li>
+                                    <li>Deep linking and URL schemes</li>
+                                </ul>
+                            </div>
+                            <div class="bug-category">
+                                <h4>Performance Optimizations</h4>
+                                <ul>
+                                    <li>Image lazy loading and caching</li>
+                                    <li>List virtualization for large datasets</li>
+                                    <li>Memory leak prevention</li>
+                                    <li>Bundle size optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="impact-box">
+                            <strong>Impact:</strong> Resolved 40+ cross-platform compatibility issues, ensuring smooth, consistent user experience across iOS, Android, and web platforms. Prevented regression through comprehensive testing practices.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contribution 6: Media Handling -->
+                <div class="contribution-block">
+                    <div class="contribution-number">06</div>
+                    <div class="contribution-content">
+                        <h3>Advanced Media Handling & Optimization</h3>
+                        <p><strong>Challenge:</strong> Handle image/video uploads, compression, thumbnail generation, and playback across platforms with varying capabilities.</p>
+                        
+                        <p><strong>Solution:</strong> Integrated native media libraries with custom compression and optimization:</p>
+                        
+                        <div class="media-features">
+                            <div class="media-feature">
+                                <strong>Image Pipeline</strong>
+                                <p>Camera capture, gallery selection, cropping/editing, HEIC conversion, compression (70% quality), thumbnail generation, chunked upload</p>
+                            </div>
+                            <div class="media-feature">
+                                <strong>Video Pipeline</strong>
+                                <p>Recording with time limits, trimming editor, FFmpeg compression, poster frame extraction, adaptive streaming, background upload</p>
+                            </div>
+                            <div class="media-feature">
+                                <strong>Optimization</strong>
+                                <p>Lazy loading, progressive JPEG, FastImage caching, CDN integration, WebP on Android, format conversion</p>
+                            </div>
+                        </div>
+
+                        <div class="code-block-wrapper">
+                            <div class="code-block">
+<pre><code>// Video Compression with FFmpeg
+import { FFmpegKit } from 'ffmpeg-kit-react-native';
+
+const compressVideo = async (inputPath: string) => {
+  const outputPath = `${FileSystem.cacheDirectory}compressed_${Date.now()}.mp4`;
+  
+  const command = `-i ${inputPath} -c:v libx264 -crf 28 -preset fast ` +
+                  `-c:a aac -b:a 128k -movflags +faststart ${outputPath}`;
+  
+  const session = await FFmpegKit.execute(command);
+  const returnCode = await session.getReturnCode();
+  
+  if (returnCode.isValueSuccess()) {
+    return outputPath; // Typically 60-80% size reduction
+  }
+  throw new Error('Compression failed');
+};</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology Stack -->
+            <section class="content-section">
+                <h2>Complete Technology Stack</h2>
+                
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>Core Framework</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">React 18.3</span>
+                            <span class="tech-pill">React Native 0.76</span>
+                            <span class="tech-pill">Expo 52</span>
+                            <span class="tech-pill">TypeScript 5.3</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>State & Data</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Redux Toolkit</span>
+                            <span class="tech-pill">GraphQL 16</span>
+                            <span class="tech-pill">GraphQL Codegen</span>
+                            <span class="tech-pill">Axios</span>
+                            <span class="tech-pill">AsyncStorage</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>UI & Styling</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">React Native Unistyles</span>
+                            <span class="tech-pill">React Native Reanimated</span>
+                            <span class="tech-pill">Gesture Handler</span>
+                            <span class="tech-pill">React Native SVG</span>
+                            <span class="tech-pill">Fast Image</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Navigation & Routing</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Expo Router 4</span>
+                            <span class="tech-pill">React Navigation</span>
+                            <span class="tech-pill">Tab View</span>
+                            <span class="tech-pill">Pager View</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Media Handling</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Expo Image Picker</span>
+                            <span class="tech-pill">Vision Camera 4</span>
+                            <span class="tech-pill">FFmpeg Kit</span>
+                            <span class="tech-pill">React Native Video</span>
+                            <span class="tech-pill">Image Compressor</span>
+                            <span class="tech-pill">Video Thumbnails</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Platform Services</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Firebase Auth</span>
+                            <span class="tech-pill">Firebase Messaging</span>
+                            <span class="tech-pill">Google Sign-In</span>
+                            <span class="tech-pill">Apple Authentication</span>
+                            <span class="tech-pill">Expo Location</span>
+                            <span class="tech-pill">React Native Maps</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Internationalization</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">LinguiJS 5</span>
+                            <span class="tech-pill">Expo Localization</span>
+                            <span class="tech-pill">Intl Polyfills</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-category">
+                        <h3>Development Tools</h3>
+                        <div class="tech-pills-grid">
+                            <span class="tech-pill">Storybook 8</span>
+                            <span class="tech-pill">Jest 29</span>
+                            <span class="tech-pill">React Testing Library</span>
+                            <span class="tech-pill">ESLint</span>
+                            <span class="tech-pill">Prettier</span>
+                            <span class="tech-pill">Husky</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results & Impact -->
+            <section class="content-section">
+                <h2>Results & Business Impact</h2>
+                
+                <div class="impact-table">
+                    <div class="impact-row header">
+                        <span>Metric</span>
+                        <span>Achievement</span>
+                        <span>Impact</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Component Library</span>
+                        <span>50+ reusable components</span>
+                        <span class="highlight">40% dev acceleration</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Cross-Platform Support</span>
+                        <span>iOS, Android, Web</span>
+                        <span class="highlight">3x platform reach</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Bug Resolution</span>
+                        <span>40+ compatibility issues fixed</span>
+                        <span class="highlight">Production-ready quality</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Internationalization</span>
+                        <span>English + Chinese support</span>
+                        <span class="highlight">Expanded market potential</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Real-Time Features</span>
+                        <span>GraphQL subscriptions</span>
+                        <span class="highlight">Modern social experience</span>
+                    </div>
+                    <div class="impact-row">
+                        <span>Project Status</span>
+                        <span>Production-ready platform</span>
+                        <span class="highlight">Ready for launch</span>
+                    </div>
+                </div>
+
+                <div class="roi-breakdown">
+                    <h3>Key Achievement Highlights</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-icon">📱</div>
+                            <strong>Cross-Platform Excellence</strong>
+                            <p>Single codebase supporting iOS, Android, and web with consistent user experience and platform-specific optimizations</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">⚡</div>
+                            <strong>Real-Time Social Features</strong>
+                            <p>Instant messaging, live notifications, and dynamic content updates via GraphQL subscriptions</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🎨</div>
+                            <strong>50+ Reusable Components</strong>
+                            <p>Comprehensive component library accelerating feature development while maintaining design consistency</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🌐</div>
+                            <strong>Multilingual Support</strong>
+                            <p>Complete i18n implementation with English and Chinese language support using LinguiJS</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🐛</div>
+                            <strong>40+ Bugs Resolved</strong>
+                            <p>Systematic debugging and testing ensuring production-ready quality across all platforms</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">🚀</div>
+                            <strong>Production Ready</strong>
+                            <p>Scalable architecture ready to support thousands of concurrent users with smooth performance</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Features -->
+            <section class="content-section">
+                <h2>Core Application Features</h2>
+                
+                <div class="feature-showcase">
+                    <div class="feature-row">
+                        <div class="feature-box">
+                            <h3>Social Networking</h3>
+                            <ul>
+                                <li>User profiles & pet profiles</li>
+                                <li>Friend connections & family crews</li>
+                                <li>Content feed with posts & media</li>
+                                <li>Comments, likes, and shares</li>
+                                <li>Hashtag discovery</li>
+                            </ul>
+                        </div>
+                        <div class="feature-box">
+                            <h3>Messaging</h3>
+                            <ul>
+                                <li>Direct chat (1-on-1)</li>
+                                <li>Group chat with multiple users</li>
+                                <li>Real-time message delivery</li>
+                                <li>Media sharing (images/videos)</li>
+                                <li>Read receipts & typing indicators</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-row">
+                        <div class="feature-box">
+                            <h3>Events & Activities</h3>
+                            <ul>
+                                <li>Create & discover local pet events</li>
+                                <li>Map-based event discovery</li>
+                                <li>RSVP & attendance tracking</li>
+                                <li>Event notifications & reminders</li>
+                                <li>Lost pet alerts</li>
+                            </ul>
+                        </div>
+                        <div class="feature-box">
+                            <h3>Content Creation</h3>
+                            <ul>
+                                <li>Photo/video capture & upload</li>
+                                <li>AI-powered breed detection</li>
+                                <li>Content editing & filters</li>
+                                <li>QR code pet profiles</li>
+                                <li>Draft management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Learnings -->
+            <section class="content-section">
+                <h2>Key Engineering Learnings</h2>
+                
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <h3>Architecture Decisions Matter Early</h3>
+                        <p>Building from scratch taught the importance of making thoughtful architecture decisions at inception. Choosing cross-platform development and modular architecture enabled rapid feature development throughout the project lifecycle.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Performance Optimization from Day One</h3>
+                        <p>Implementing performance optimizations (virtualization, lazy loading, image caching) from the beginning is far easier than retrofitting. Early focus on performance ensures the app remains smooth as features are added.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Component Reusability Accelerates Development</h3>
+                        <p>Creating comprehensive component library early in development significantly accelerated feature implementation by 40% and maintained UI consistency across the entire platform.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Platform-Specific Testing is Critical</h3>
+                        <p>Cross-platform development requires testing on all target platforms. Small differences in behavior (flexbox, keyboard handling, native modules) can cause significant UX issues if not caught early.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>State Management Shapes Architecture</h3>
+                        <p>Redux Toolkit's slice pattern and async thunks provided excellent structure for complex state management. Normalized state and memoized selectors prevented performance issues at scale.</p>
+                    </div>
+                    <div class="learning-card">
+                        <h3>Real-Time Features Require Careful Design</h3>
+                        <p>GraphQL subscriptions with optimistic updates created responsive UX, but required careful connection management, error handling, and reconnection logic to ensure reliability.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <h2>Production-Ready Cross-Platform Application</h2>
+                <p>Comprehensive social media platform built from scratch, ready for launch across iOS, Android, and web.</p>
+                
+                <div class="cta-grid">
+                    <div class="cta-card">
+                        <h3>Cross-Platform Development</h3>
+                        <p>React Native + Expo delivering consistent experience across iOS, Android, and web with shared codebase</p>
+                    </div>
+                    <div class="cta-card">
+                        <h3>Modern Tech Stack</h3>
+                        <p>TypeScript, Redux Toolkit, GraphQL subscriptions, Firebase auth, real-time features</p>
+                    </div>
+                    <div class="cta-card">
+                        <h3>Production Quality</h3>
+                        <p>50+ components, 40+ bugs resolved, multilingual support, scalable architecture</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="project-footer">
+                <p>Built with React Native | Expo | TypeScript | Redux | GraphQL | Firebase</p>
+                <p>Cross-Platform Pet Social Media Application</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
